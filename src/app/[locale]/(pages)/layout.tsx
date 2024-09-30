@@ -6,6 +6,8 @@ import { cn } from "@/lib/utils";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import NextTopLoader from "nextjs-toploader";
+import { LoaderTop } from "@/components/LoaderTop";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +27,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={cn(inter.className, "bg-white  dark:bg-[#1C1C1C]")}>
+                <LoaderTop />
                 <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} storageKey="@ljconstrutic-site">
                     <NextIntlClientProvider locale={locale} messages={messages}>
                         <Header />
