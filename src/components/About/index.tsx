@@ -3,7 +3,11 @@ import { Button } from "../ui/button";
 
 export const AboutUs = () => {
     return (
-        <section className="max-w-[1548px] mx-auto w-full h-[529px] bg-[#fbfbfb] mt-[80px] flex items-center dark:bg-black">
+        <section
+            data-aos="fade-in"
+            id="aboutus"
+            className="max-w-[1548px] mx-auto w-full h-[529px] bg-[#fbfbfb] mt-[80px] flex items-center dark:bg-black"
+        >
             <div className="relative w-full max-w-[700px] h-[401px]">
                 <div className="w-[473.82px] absolute h-[340px] rounded-[14px] left-48 top-0 bg-black"></div>
                 <div className="w-[473.82px] absolute h-[340px] rounded-[14px] top-24 left-14 bg-black"></div>

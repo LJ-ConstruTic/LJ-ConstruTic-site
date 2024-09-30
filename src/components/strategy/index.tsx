@@ -2,7 +2,7 @@ import { Container } from "../ContainerRoot";
 
 export const Strategy = () => {
     return (
-        <section className="w-full mt-[96px] h-[508px] dark:bg-black bg-gray-50">
+        <section data-aos="fade-up" className="w-full mt-[96px] h-[508px] dark:bg-black bg-gray-50">
             <Container>
                 <section className="w-full h-[508px] flex lg:flex-row flex-col gap-8 items-center">
                     <div className="flex flex-col gap-8 max-w-[640px]">

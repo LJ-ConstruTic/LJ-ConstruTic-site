@@ -2,7 +2,7 @@ import { Container } from "../ContainerRoot";
 
 export const Goals = () => {
     return (
-        <section className="w-full mt-[96px]">
+        <section data-aos="fade-up" className="w-full mt-[96px]">
             <Container>
                 <h2 className="font-bold text-2xl text-center">Metas</h2>
                 <section className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-8 mb-20">

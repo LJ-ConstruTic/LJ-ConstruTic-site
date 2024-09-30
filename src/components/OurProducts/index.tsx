@@ -3,7 +3,7 @@ import { Container } from "../ContainerRoot";
 export const OurProducts = () => {
     return (
         <Container>
-            <section className="w-full mt-[101px]">
+            <section data-aos="fade-up" id="products" className="w-full mt-[101px]">
                 <h2 className="font-bold text-[32px] text-center">Nossos produtos</h2>
                 <div className="mt-16 grid xl:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-8">
                     {[1, 2, 3, 4].map((i, j) => (
