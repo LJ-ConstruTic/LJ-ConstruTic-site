@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/providers/theme";
 import { cn } from "@/lib/utils";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default function RootLayout({
                     <NextIntlClientProvider locale={locale} messages={messages}>
                         <Header />
                         {children}
+                        <Footer />
                     </NextIntlClientProvider>
                 </ThemeProvider>
             </body>
