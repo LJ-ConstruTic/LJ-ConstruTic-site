@@ -17,8 +17,8 @@ export const OurServices = () => {
 
 export const ServiceItem = () => {
     return (
-        <div className="w-full h-[243px] flex items-center gap-4 rounded-[8px] bg-gray-50 dark:bg-transparent">
-            <div className="w-[241.35px] h-[243px] bg-black"></div>
+        <div className="w-full h-[243px] flex items-center shadow-lg gap-4 rounded-[8px] bg-gray-50 dark:bg-transparent">
+            <div className="w-[241.35px] h-[243px] rounded-tl-[12px] rounded-bl-[12px] bg-black"></div>
             <div className="flex flex-col gap-3">
                 <h3 className="font-bold text-[24px]">Serviço 1</h3>
                 <p className="text-[16px] line-clamp-4">

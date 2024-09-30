@@ -1,8 +1,8 @@
 import { AboutUs } from "@/components/About";
 import { Banner } from "@/components/Banner";
-import { Container } from "@/components/ContainerRoot";
 import { OurProducts } from "@/components/OurProducts";
 import { OurServices } from "@/components/OurServices";
+import { Strategy } from "@/components/strategy";
 
 export const HomeView = () => {
     return (
@@ -11,6 +11,7 @@ export const HomeView = () => {
             <OurProducts />
             <AboutUs />
             <OurServices />
+            <Strategy />
         </main>
     );
 };
