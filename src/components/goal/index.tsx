@@ -18,9 +18,9 @@ export const Goals = () => {
 export const GoalItem = ({ item, isHorizontal }: { item: number; isHorizontal?: boolean }) => {
     if (isHorizontal) {
         return (
-            <div className="max-w-[275.99px] w-full h-[234px] bg-gray-50 dark:bg-transparent dark:border dark:border-white rounded-[8px] flex flex-col gap-1 pt-1">
+            <div className="max-w-[275.99px] w-full h-[234px] bg-gray-50 dark:bg-black rounded-[8px] flex flex-col gap-1 pt-1">
                 <div className="relative -left-6 flex items-center gap-6">
-                    <div className="w-[80px] h-[80px] rounded-full flex items-center justify-center bg-black">
+                    <div className="w-[80px] h-[80px] rounded-full flex items-center justify-center  dark:bg-gray-950 bg-black">
                         <span className="text-white text-4xl font-bold">{item}</span>
                     </div>
                     <h3 className="font-bold text-xl relative -top-4">Meta {item}</h3>
@@ -36,9 +36,9 @@ export const GoalItem = ({ item, isHorizontal }: { item: number; isHorizontal?: 
         );
     }
     return (
-        <div className="max-w-[414px] w-full h-[148px] bg-gray-50 dark:bg-transparent dark:border dark:border-white rounded-[8px] flex gap-1 pt-4">
+        <div className="max-w-[414px] w-full h-[148px] bg-gray-50 dark:bg-black rounded-[8px] flex gap-1 pt-4">
             <div className="relative -left-6">
-                <div className="w-[80px] h-[80px] rounded-full flex items-center justify-center bg-black">
+                <div className="w-[80px] h-[80px] rounded-full flex items-center justify-center dark:bg-gray-950 bg-black">
                     <span className="text-white text-4xl font-bold">{item}</span>
                 </div>
             </div>
