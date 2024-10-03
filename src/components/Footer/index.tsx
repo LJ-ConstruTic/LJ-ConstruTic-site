@@ -2,14 +2,14 @@ import { Container } from "../ContainerRoot";
 
 export const Footer = () => {
     return (
-        <footer className="w-full h-[305px] bg-gray-400 dark:bg-black mt-[31px]">
+        <footer className="w-full h-[305px] bg-gray-200 dark:bg-black mt-[31px]">
             <Container>
                 <div className="w-full flex flex-col items-center h-[278px] py-3 gap-4">
                     <h1 className="font-bold text-2xl">
                         <span className="text-primary-blue">LJ</span>ConstruTic
                     </h1>
 
-                    <ul className="flex gap-8 text-sm">
+                    <ul className="flex gap-2 lg:gap-8 text-sm">
                         <li>
                             <a href="#">Quem somos</a>
                         </li>

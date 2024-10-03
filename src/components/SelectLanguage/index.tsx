@@ -16,7 +16,7 @@ export function ToogleLanguage() {
     }
     return (
         <Select onValueChange={(locale) => toogleLanguage(locale)} defaultValue={lang ?? "pt"}>
-            <SelectTrigger className="w-[120px]">
+            <SelectTrigger className="md:w-[120px] w-[50px]">
                 <SelectValue placeholder={lang} />
             </SelectTrigger>
             <SelectContent>
