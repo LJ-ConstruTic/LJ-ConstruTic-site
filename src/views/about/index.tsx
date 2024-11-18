@@ -10,6 +10,11 @@ const IMG_EYE = "/look.png";
 const IMG_FOGUET = "/foguet.png";
 const IMG_URL =
     "https://s3-alpha-sig.figma.com/img/76b5/81b4/1102dd2a4b2e8801ba6094755a2b4ed9?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=I7nJJRVUsP9YNcdrNz2tMY-L9O8P~XfLOwn-bC1ro9YMH34mOMAxxTJ5lBTTbiFmHEV~HDoR-uJozA~vaSPAozUKwQK68IqdWx0vpeiqta4gmBfe777-M-qqbwvhpmiEZjMutsG0TPvenAmmWp7-nyf4m-SKsmcJF6MD06X9ScbUYnxGvhV9cXHRAUY6CXns6qUBPxO56lgdaNzsq47W5B8Cd5tz7HNSagSabbpSY~cZr420MO7aQT3cUWI6ebXQ9HcshfvqbijPnm~UhPHwi7dKA6zpoXGQeHpi~VcnJU76-CgPem13hww~maiM6tx6f9HM3G6~uMYGUbCwQhsJ4A__";
+const IMG1 =
+    "https://ljconstrutic.com/____impro/1/onewebmedia/ia2.jpg?etag=%221b2fc-66393773%22&sourceContentType=image%2Fjpeg&ignoreAspectRatio&resize=547%2B340&quality=85";
+
+const IMG2 =
+    "https://ljconstrutic.com/____impro/1/onewebmedia/unsplash_prXwCmJolGA___serialized1.jpg?etag=%221dc60fa-666186f3%22&sourceContentType=image%2Fpng&ignoreAspectRatio&resize=499%2B340";
 
 export const AboutView = () => {
     const { data: Teams, isLoading } = useSWR("teams", getTeams);
@@ -40,8 +45,12 @@ export const AboutView = () => {
             <Container>
                 <section className="w-full flex mt-[54px] items-center">
                     <div className="relative w-full max-w-[700px] h-[401px] hidden xl:flex">
-                        <div className="w-[473.82px] absolute h-[340px] rounded-[14px] left-40 top-0 bg-black"></div>
-                        <div className="w-[473.82px] absolute h-[340px] rounded-[14px] top-24 left-0 bg-black"></div>
+                        <div className="w-[473.82px] absolute h-[340px] rounded-[14px] left-40 top-0 bg-black">
+                            <img src={IMG2} alt="" className="w-full h-full object-cover rounded-[14px]" />
+                        </div>
+                        <div className="w-[473.82px] absolute h-[340px] rounded-[14px] top-24 left-0 bg-black">
+                            <img src={IMG1} alt="" className="w-full h-full object-cover rounded-[14px]" />
+                        </div>
                     </div>
                     <div className="w-full xl:max-w-[580px] flex flex-col gap-2">
                         <h3 className="text-[32px] text-green-400">Nós existimos por uma</h3>
@@ -105,7 +114,7 @@ export const AboutView = () => {
                     </div>
                 </section>
             </Container>
-            <section className="w-full bg-[#FBFBFB] h-[564px] mt-[95px]">
+            <section className="w-full bg-[#FBFBFB] dark:bg-black h-[564px] mt-[95px]">
                 <Container>
                     <div className="flex items-center gap-2 pt-[36px]">
                         <span className="text-[28px] text-green-400">Nossa</span>
