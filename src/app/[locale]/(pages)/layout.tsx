@@ -9,6 +9,11 @@ import { Footer } from "@/components/Footer";
 import { LoaderTop } from "@/components/LoaderTop";
 import "aos/dist/aos.css";
 import { AosContainer } from "@/components/Aos";
+import "@splidejs/react-splide/css";
+import "@splidejs/react-splide/css/skyblue";
+import "@splidejs/react-splide/css/sea-green";
+import "@splidejs/react-splide/css/core";
+import toast, { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,6 +39,7 @@ export default function RootLayout({
                     <NextIntlClientProvider locale={locale} messages={messages}>
                         <Header />
                         {children}
+                        <Toaster />
                         <Footer />
                     </NextIntlClientProvider>
                 </ThemeProvider>

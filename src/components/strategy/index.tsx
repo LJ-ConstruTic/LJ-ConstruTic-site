@@ -1,5 +1,8 @@
 import { Container } from "../ContainerRoot";
 
+const imgStrategy =
+    "https://ljconstrutic.com/____impro/1/onewebmedia/estrategiaNego.gif?etag=%223308e-66428864%22&sourceContentType=image%2Fgif&ignoreAspectRatio&resize=704%2B352";
+
 export const Strategy = () => {
     return (
         <section data-aos="fade-up" className="w-full mt-[42px] py-4 lg:py-0 lg:mt-[96px] h-auto lg:h-[508px] dark:bg-black bg-gray-50">
@@ -20,7 +23,9 @@ export const Strategy = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="w-full h-[380px] bg-black rounded-[14px]"></div>
+                    <div className="w-full h-[380px] rounded-[14px]">
+                        <img src={imgStrategy} className="w-full h-full object-cover rounded-[14px]" alt="estrategia" />
+                    </div>
                 </section>
             </Container>
         </section>
