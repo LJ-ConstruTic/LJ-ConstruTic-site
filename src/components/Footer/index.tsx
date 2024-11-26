@@ -9,8 +9,8 @@ export const Footer = () => {
                     <h1 className="font-bold text-2xl text-left">
                         <span className="text-primary-blue">LJ</span>ConstruTic
                     </h1>
-                    <div className="flex  gap-10">
-                        <ul className="flex flex-col  gap-3  text-sm">
+                    <div className="flex justify-between gap-10">
+                        <ul className="flex flex-col  gap-2  text-sm">
                             <li>
                                 <a href="#aboutus" className="hover:text-primary-blue transition">
                                     Quem somos
@@ -33,15 +33,15 @@ export const Footer = () => {
                             </li>
                         </ul>
 
-                        <div className="text-sm space-y-8">
-                            <div className="space-y-1">
-                                <span className="block">+244 933 477 555</span>
-                                <span className="block">info@ljconstrutic.com</span>
-                            </div>
+                        <div className="text-sm flex gap-10">
                             <p>
                                 Luís José - Construção e Soluções Tecnológicas LDA, <br />
                                 Santa Cruz - Vila, Lobito, Benguela
                             </p>
+                            <div className="space-y-1">
+                                <span className="block">+244 933 477 555</span>
+                                <span className="block">info@ljconstrutic.com</span>
+                            </div>
                         </div>
                     </div>
                 </div>

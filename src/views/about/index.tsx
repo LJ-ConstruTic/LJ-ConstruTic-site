@@ -141,17 +141,9 @@ export const AboutView = () => {
                             }}
                             style={{ width: "100%", padding: 0, margin: 0 }}
                         >
-                            {Teams?.map((item, idx) => (
-                                <SplideSlide key={idx}>
-                                    <div className="w-[240px] h-[295px] cursor-pointer">
-                                        <div className="w-full h-[250px] border rounded-[6px]">
-                                            <img src={item.imageUrl} alt={item.name} className="w-full h-full object-cover rounded-[6px]" />
-                                        </div>
-                                        <div className="w-[199.68px] h-[89px] mx-auto relative -mt-[50px] rounded-[4px] bg-white z-10 border shadow-md p-3 flex flex-col gap-2 items-center justify-center">
-                                            <span className="font-semibold">{item.name}</span>
-                                            <span className="text-[14px] text-center text-blue-400">{item.job}</span>
-                                        </div>
-                                    </div>
+                            {Teams?.map((item) => (
+                                <SplideSlide key={item.id}>
+                                    <OficialCard key={item.id} item={item} />
                                 </SplideSlide>
                             ))}
                         </Splide>
@@ -160,5 +152,20 @@ export const AboutView = () => {
             </section>
             <ContactUs />
         </main>
+    );
+};
+
+const OficialCard = ({ item }: { item: { name: string; job: string; imageUrl: string } }) => {
+    if (!item) return null;
+    return (
+        <div className="w-[240px] h-[295px] cursor-pointer">
+            <div className="w-full h-[250px] border rounded-[6px]">
+                <img src={item.imageUrl} alt={item.name} className="w-full h-full object-cover rounded-[6px]" />
+            </div>
+            <div className="w-[199.68px] h-[89px] mx-auto relative -mt-[50px] rounded-[4px] bg-white z-10 border shadow-md p-3 flex flex-col gap-2 items-center justify-center">
+                <span className="font-semibold">{item.name}</span>
+                <span className="text-[14px] text-center text-blue-400">{item.job}</span>
+            </div>
+        </div>
     );
 };

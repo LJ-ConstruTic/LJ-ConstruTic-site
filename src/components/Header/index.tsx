@@ -81,7 +81,7 @@ export const Header = () => {
                             </ul>
                         </nav>
                     </div>
-                    <div className="flex items-center gap-1">
+                    <div className="flex items-center gap-1 flex-1 justify-end">
                         <ToogleLanguage />
                         <ModeToggle />
                         <HamburgerMenu />
