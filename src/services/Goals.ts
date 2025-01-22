@@ -1,4 +1,4 @@
-import { IGoals } from "@/model/IGoals";
+import { IGoals } from "@/domain/models/Goals";
 import api from "./apiClient";
 
 export async function getGoals(): Promise<IGoals[]> {

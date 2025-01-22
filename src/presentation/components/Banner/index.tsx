@@ -47,7 +47,7 @@ export const Banner = () => {
 
     return (
         <Container>
-            <section className="w-full flex lg:flex-row flex-col gap-4 lg:gap-0 mt-5 items-center">
+            <section className="w-full flex lg:flex-row flex-col h-auto gap-4 lg:gap-0 mt-5 items-center">
                 <div className="w-full flex flex-col items-center lg:items-start lg:gap-9 gap-3">
                     <h4 className="lg:text-[52px] text-3xl text-center md:text-start font-bold sm:leading-[50px] xl:leading-[65.35px]">
                         Qualidade e eficiência <br className="xl:block hidden" /> em um só lugar
@@ -65,7 +65,7 @@ export const Banner = () => {
                         </a>
                     </div>
                 </div>
-                <div className="w-full h-[300px] lg:h-[500px] flex rounded-[14px]">
+                <div className="w-full xl:h-[500px] flex rounded-[14px]">
                     <Splide
                         options={{
                             type: "loop",

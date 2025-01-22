@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/providers/theme";
 import { cn } from "@/lib/utils";
 import { NextIntlClientProvider, useMessages } from "next-intl";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { LoaderTop } from "@/components/LoaderTop";
 import "aos/dist/aos.css";
-import { AosContainer } from "@/components/Aos";
 import "@splidejs/react-splide/css";
 import "@splidejs/react-splide/css/skyblue";
 import "@splidejs/react-splide/css/sea-green";
 import "@splidejs/react-splide/css/core";
 import toast, { Toaster } from "react-hot-toast";
+import { LoaderTop } from "@/presentation/components/LoaderTop";
+import { AosContainer } from "@/presentation/components/Aos";
+import { ThemeProvider } from "@/presentation/providers/theme";
+import { Header } from "@/presentation/components/Header";
+import { Footer } from "@/presentation/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 

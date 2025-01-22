@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/presentation/components/ui/button";
 import { getServiceById } from "@/services/serviceType";
 import { ArrowRight } from "lucide-react";
 import useSWR from "swr";

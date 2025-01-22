@@ -1,4 +1,4 @@
-import { IContact } from "@/model/IContact";
+import { IContact } from "@/domain/models/Contact";
 import api from "./apiClient";
 
 export async function sendEmailContact(data: Omit<IContact, "idx">): Promise<IContact> {

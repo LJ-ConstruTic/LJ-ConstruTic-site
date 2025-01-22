@@ -1,7 +1,15 @@
 "use client";
 import * as React from "react";
 
-import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectLabel,
+    SelectTrigger,
+    SelectValue,
+} from "@/presentation/components/ui/select";
 import { usePathname } from "@/lib/locale/navigation";
 import { useRouter } from "@/lib/locale/navigation";
 import { getCookie } from "cookies-next";

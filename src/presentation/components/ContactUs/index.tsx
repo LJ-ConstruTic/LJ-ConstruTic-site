@@ -1,5 +1,4 @@
 "use client";
-
 import { ArrowRight } from "lucide-react";
 import { Container } from "../ContainerRoot";
 import { Button } from "../ui/button";
@@ -7,11 +6,12 @@ import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import * as yup from "yup";
 import { useFormik } from "formik";
-import { IContact } from "@/model/IContact";
 import { ErrorMessage } from "../ErrorMessage";
 import toast from "react-hot-toast";
-import { sendEmailContact } from "@/services/contact";
 import { useState } from "react";
+import { IContact } from "@/domain/models/Contact";
+import AxiosAdapter from "@/infra/http/axiosAdapter";
+import ContactGatewayHttpClient from "@/infra/gateway/contact/contactGatewayHttp";
 
 export const ContactUs = () => {
     const [disabled, setDisabled] = useState<boolean>(false);
@@ -32,14 +32,16 @@ export const ContactUs = () => {
             setDisabled(true);
             console.log(values, ":::::::::::::::::::::");
             try {
-                const response = await sendEmailContact(values);
+                const httpClient = new AxiosAdapter();
+                const contactGateway = new ContactGatewayHttpClient(httpClient);
+                const response = await contactGateway.postContact(values);
                 if (response) {
                     toast.success("Mensagem enviada com sucesso!");
                     formik.resetForm();
                     setDisabled(false);
                 }
             } catch (error) {
-                console.error(error);
+                console.error(error, ":::::::::::::::::::::::::::");
                 toast.error("Ups, ocorreu um erro inesperado!");
                 setDisabled(false);
             } finally {

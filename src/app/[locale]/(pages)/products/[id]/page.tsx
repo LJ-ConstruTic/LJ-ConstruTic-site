@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/presentation/components/ui/button";
 import { getProductById } from "@/services/product";
 import { ArrowRight } from "lucide-react";
 import useSWR from "swr";

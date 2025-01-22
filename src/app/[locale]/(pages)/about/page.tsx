@@ -1,4 +1,4 @@
-import { AboutView } from "@/views/about";
+import { AboutView } from "@/presentation/views/about";
 
 export default function AboutPage() {
     return <AboutView />;

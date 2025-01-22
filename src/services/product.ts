@@ -1,4 +1,4 @@
-import { IProduct } from "@/model/IProduct";
+import { IProduct } from "@/domain/models/Product";
 import api from "./apiClient";
 
 export async function postProduct(product: Omit<IProduct, "id">): Promise<IProduct> {
