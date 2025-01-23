@@ -1,6 +1,6 @@
 "use client";
-import { ContactUs } from "@/components/ContactUs";
-import { Container } from "@/components/ContainerRoot";
+import { ContactUs } from "@/presentation/components/ContactUs";
+import { Container } from "@/presentation/components/ContainerRoot";
 import { getTeams } from "@/services/Team";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import React from "react";

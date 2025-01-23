@@ -3,17 +3,17 @@
 import useSWR from "swr";
 import { Container } from "../ContainerRoot";
 import { getGoals } from "@/services/Goals";
-import { IGoals } from "@/model/IGoals";
+import { IGoals } from "@/domain/models/Goals";
 
 export const Goals = () => {
-    const { data: Goals, isLoading } = useSWR("goals", getGoals);
+    // const { data: Goals, isLoading } = useSWR("goals", getGoals);
 
     return (
         <section data-aos="fade-up" className="w-full px-3 xl:px-0 mt-[42px] lg:mt-[96px]">
             <Container>
                 <h2 className="font-bold text-xl lg:text-2xl text-center">Metas</h2>
                 <section className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-items-center xl:place-items-start gap-8 mt-8 mb-20">
-                    {Goals?.map((item, idx) => {
+                    {[]?.map((item, idx) => {
                         if (idx > 10) return;
                         return <GoalItem key={idx} item={item} isHorizontal={idx > 4} />;
                     })}
