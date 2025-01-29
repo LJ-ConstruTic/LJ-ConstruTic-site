@@ -1,20 +1,19 @@
 "use client";
 
-import useSWR from "swr";
 import { Container } from "../ContainerRoot";
-import { getGoals } from "@/services/Goals";
-import { IGoals } from "@/domain/models/Goals";
+import { IGoal } from "@/domain/models/Goals";
 
-export const Goals = () => {
-    // const { data: Goals, isLoading } = useSWR("goals", getGoals);
+type props = {
+    goals: IGoal[];
+};
 
+export const Goals = ({ goals }: props) => {
     return (
         <section data-aos="fade-up" className="w-full px-3 xl:px-0 mt-[42px] lg:mt-[96px]">
             <Container>
                 <h2 className="font-bold text-xl lg:text-2xl text-center">Metas</h2>
                 <section className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-items-center xl:place-items-start gap-8 mt-8 mb-20">
-                    {[]?.map((item, idx) => {
-                        if (idx > 10) return;
+                    {goals?.map((item, idx) => {
                         return <GoalItem key={idx} item={item} isHorizontal={idx > 4} />;
                     })}
                 </section>
@@ -23,7 +22,7 @@ export const Goals = () => {
     );
 };
 
-export const GoalItem = ({ item, isHorizontal }: { item: IGoals; isHorizontal?: boolean }) => {
+export const GoalItem = ({ item, isHorizontal }: { item: IGoal; isHorizontal?: boolean }) => {
     if (isHorizontal) {
         return (
             <div className="lg:max-w-[275.99px] w-full h-[234px] bg-gray-50 dark:bg-black rounded-[8px] flex flex-col gap-1 pt-1">
@@ -34,11 +33,7 @@ export const GoalItem = ({ item, isHorizontal }: { item: IGoals; isHorizontal?: 
                     <h3 className="font-bold text-xl relative -top-4">Meta {item.idx}</h3>
                 </div>
                 <div className="w-full px-3">
-                    <p className="text-xs mt-3 line-clamp-7 text-justify lg:text-start">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum perspiciatis non dolor impedit saepe ratione illo
-                        recusandae animi, molestias debitis doloremque deleniti assumenda sunt quae nisi soluta, atque id similique?Lorem
-                        ipsum dolor sit amet consectetur. Duis at lorem{" "}
-                    </p>
+                    <p className="text-xs mt-3 line-clamp-7 text-justify lg:text-start">{item.description?.tag.pt}</p>
                 </div>
             </div>
         );
@@ -52,11 +47,7 @@ export const GoalItem = ({ item, isHorizontal }: { item: IGoals; isHorizontal?: 
             </div>
             <div className="w-full">
                 <h3 className="font-bold text-xl">Meta {item.idx}</h3>
-                <p className="text-xs mt-3 line-clamp-4  text-justify lg:text-start">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum perspiciatis non dolor impedit saepe ratione illo
-                    recusandae animi, molestias debitis doloremque deleniti assumenda sunt quae nisi soluta, atque id similique?Lorem ipsum
-                    dolor sit amet consectetur. Duis at lorem{" "}
-                </p>
+                <p className="text-xs mt-3 line-clamp-4  text-justify lg:text-start">{item.description?.tag.pt}</p>
             </div>
         </div>
     );
