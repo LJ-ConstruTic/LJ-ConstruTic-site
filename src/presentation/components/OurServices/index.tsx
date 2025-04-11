@@ -7,7 +7,8 @@ import { IService } from "@/domain/models/Service";
 import { getCookie } from "cookies-next";
 import { MENU_ID_LIST } from "@/lib/data";
 import { useTranslations } from "next-intl";
-import { Button, Card, CardBody, CardHeader, Typography } from "@material-tailwind/react";
+import { Card, CardBody, CardHeader, Typography } from "@material-tailwind/react";
+import { Button } from "../ui/button";
 
 type props = {
     servicesType: IService[];

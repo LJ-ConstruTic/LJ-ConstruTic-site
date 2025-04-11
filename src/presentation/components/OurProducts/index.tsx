@@ -7,8 +7,9 @@ import { getCookie } from "cookies-next";
 import { Component } from "@/domain/models/component";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { MENU_ID_LIST } from "@/lib/data";
-import { Button, Card, Typography } from "@material-tailwind/react";
+import { Card, Typography } from "@material-tailwind/react";
 import { useTranslations } from "next-intl";
+import { Button } from "../ui/button";
 
 type props = {
     products: IProduct[];
