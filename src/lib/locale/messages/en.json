@@ -30,6 +30,9 @@
         "title": "Our Products",
         "contactButton": "request now"
     },
+    "Goals": {
+        "title": "Goals"
+    },
     "Footer": {
         "copyright": "Copyright &copy; {year} All Rights Reserved"
     }

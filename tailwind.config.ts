@@ -1,10 +1,17 @@
 import type { Config } from "tailwindcss";
+import { mtConfig } from "@material-tailwind/react";
 
 const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
 
 const config = {
     darkMode: ["class"],
-    content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+    content: [
+        "./pages/**/*.{ts,tsx}",
+        "./components/**/*.{ts,tsx}",
+        "./app/**/*.{ts,tsx}",
+        "./src/**/*.{ts,tsx}",
+        "./node_modules/@material-tailwind/react/**/*.{js,ts,jsx,tsx}",
+    ],
     prefix: "",
     theme: {
         container: {
@@ -24,7 +31,8 @@ const config = {
                 primary: {
                     DEFAULT: "hsl(var(--primary))",
                     foreground: "hsl(var(--primary-foreground))",
-                    blue: "#35A0ED",
+                    blue: "#1055CC",
+                    green: "#35A853",
                 },
                 secondary: {
                     DEFAULT: "hsl(var(--secondary))",
@@ -72,7 +80,7 @@ const config = {
             },
         },
     },
-    plugins: [addVariablesForColors, require("tailwindcss-animate")],
+    plugins: [addVariablesForColors, require("tailwindcss-animate"), mtConfig],
 } satisfies Config;
 
 function addVariablesForColors({ addBase, theme }: any) {

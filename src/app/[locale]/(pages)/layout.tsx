@@ -14,6 +14,8 @@ import { AosContainer } from "@/presentation/components/Aos";
 import { ThemeProvider } from "@/presentation/providers/theme";
 import { Header } from "@/presentation/components/Header";
 import { Footer } from "@/presentation/components/Footer";
+import { Suspense } from "react";
+import Loading from "@/presentation/components/loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,15 +34,17 @@ export default function RootLayout({
     const messages = useMessages();
     return (
         <html lang="en">
-            <body className={cn(inter.className, "bg-white  dark:bg-[#1C1C1C]")}>
+            <body className={cn(inter.className, "bg-white dark:bg-black text-slate-900 dark:text-slate-100")}>
                 <LoaderTop />
                 <AosContainer />
                 <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} storageKey="@ljconstrutic-site">
                     <NextIntlClientProvider locale={locale} messages={messages}>
-                        <Header />
-                        {children}
-                        <Toaster />
-                        <Footer />
+                        <Suspense fallback={""}>
+                            <Header />
+                            {children}
+                            <Toaster />
+                            <Footer />
+                        </Suspense>
                     </NextIntlClientProvider>
                 </ThemeProvider>
             </body>

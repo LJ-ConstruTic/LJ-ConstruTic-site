@@ -1,14 +1,14 @@
 "use client";
 import Link from "next/link";
 import { Container } from "../ContainerRoot";
-import React, { useState } from "react";
+import React from "react";
 import { IProduct } from "@/domain/models/Product";
 import { getCookie } from "cookies-next";
 import { Component } from "@/domain/models/component";
-import { AnimatePresence, motion } from "framer-motion";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { MENU_ID_LIST } from "@/lib/data";
-import Image from "next/image";
+import { Button, Card, Typography } from "@material-tailwind/react";
+import { useTranslations } from "next-intl";
 
 type props = {
     products: IProduct[];
@@ -20,9 +20,11 @@ export const OurProducts: React.FC<props> = ({ products, productComponent }) => 
 
     return (
         <Container>
-            <section data-aos="fade-up" id={MENU_ID_LIST.PRODUCTS} className="w-full mt-10 xl:mt-[101px]">
-                <h2 className="font-bold text-[32px] text-center">{productComponent?.items[0].tag[lang_current]!}</h2>
-                <div className="mt-5 md:mt-8 w-full flex">
+            <section id={MENU_ID_LIST.PRODUCTS} className="w-full mt-10 xl:mt-[50px]">
+                <h2 data-aos="fade-up" className="font-bold text-[32px] text-slate-700 dark:text-slate-100 text-center">
+                    {productComponent?.items[0].tag[lang_current]!}
+                </h2>
+                <div data-aos="fade-up" className="mt-4 w-full flex">
                     <Splide
                         options={{
                             type: "loop",
@@ -31,7 +33,7 @@ export const OurProducts: React.FC<props> = ({ products, productComponent }) => 
                             perPage: 3,
                             drag: "free",
                             width: "100%",
-                            gap: "1rem",
+                            gap: "10px",
                             interval: 3000,
                             rewind: true,
                             speed: 800,
@@ -56,31 +58,26 @@ export const OurProducts: React.FC<props> = ({ products, productComponent }) => 
 };
 
 export const ProductCard = ({ item, tagRegion }: { item: IProduct; tagRegion: string }) => {
+    const t = useTranslations("About");
     return (
-        <div className="w-full h-auto flex flex-col">
-            <div className="w-[400] h-[400px] rounded-[16px]">
-                <Image
-                    loading="lazy"
-                    quality={90}
-                    layout="responsive"
+        <>
+            <Card className="max-w-xs dark:bg-black ">
+                <Card.Header
+                    className="max-h-[250px] text-slate-800 dark:text-slate-100"
+                    as="img"
                     src={item?.imageUrl ?? "image"}
                     alt={item?.title?.tag[tagRegion]!}
-                    width={400}
-                    height={400}
-                    className="object-center object-cover"
                 />
-            </div>
-            <div className="flex flex-col gap-2">
-                <div className="flex flex-col mt-2 text-center">
-                    <span className="font-bold text-base lg:text-xl">{item?.title?.tag[tagRegion]!}</span>
-                    <span className="lg:text-sm text-xs ">{""}</span>
-                </div>
-                {false && (
-                    <Link href={`/products/${item.idx}`}>
-                        <span className="lg:text-sm text-sm underline underline-offset-4 text-primary-blue">Ver mais</span>
-                    </Link>
-                )}
-            </div>
-        </div>
+                <Card.Body className="0">
+                    <Typography type="h6" className="text-slate-800 dark:text-slate-100">
+                        {item?.title?.tag[tagRegion]!}
+                    </Typography>
+                    <Typography className="my-1 text-foreground">{/* {item?.description?.tag[tagRegion]!} */}</Typography>
+                </Card.Body>
+                <Card.Footer>
+                    <Button className="dark:border-none border-none bg-primary-green dark:text-white">{t("buttonMore")}</Button>
+                </Card.Footer>
+            </Card>
+        </>
     );
 };

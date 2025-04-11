@@ -3,6 +3,7 @@
 import { IProduct } from "@/domain/models/Product";
 import ProductGatewayHttp from "@/infra/gateway/product/productGatewayHttp";
 import AxiosAdapter from "@/infra/http/axiosAdapter";
+import { ContactUs } from "@/presentation/components/ContactUs";
 import Loading from "@/presentation/components/loading";
 import { Button } from "@/presentation/components/ui/button";
 import { getCookie } from "cookies-next";
@@ -41,9 +42,9 @@ export default function ProductPage({ params }: { params: { id: string } }) {
     if (isLoading) return <Loading />;
 
     return (
-        <main className="w-full min-h-screen bg-gray-50 dark:bg-transparent">
+        <main className="w-full min-h-screen dark:bg-transparent">
             <section className="max-w-[1248px] px-3 xl:px-0 h-auto py-5 xl:py-0 xl:h-[573px] mx-auto w-full flex flex-col items-center gap-10 lg:flex-row ">
-                <div className="xl:max-w-[440px] rounded-[14px] h-[403px] w-full ">
+                <div className="xl:max-w-[440px] rounded-md h-[403px] w-full ">
                     <Image
                         width={440}
                         height={403}
@@ -64,13 +65,14 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                         <p>{product?.description!}  </p>
                     </div>
                     <div>
-                        <Button className="bg-primary-blue text-white flex gap-1">
+                        <Button className="bg-primary-green text-white flex gap-1">
                             <span>{t("contactButton")}</span>
                             <ArrowRight />
                         </Button>
                     </div>
                 </div>
             </section>
+            <ContactUs />
         </main>
     );
 }

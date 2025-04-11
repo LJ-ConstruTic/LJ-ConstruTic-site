@@ -26,11 +26,14 @@ export function ToogleLanguage({ languages }: props) {
             </SelectTrigger>
             <SelectContent>
                 <SelectGroup>
-                    {languages?.map((lang: Language) => (
-                        <SelectItem key={lang.id} value={lang.tag} disabled={lang.tag === lang_current}>
-                            {lang.tagRegion}
-                        </SelectItem>
-                    ))}
+                    {languages?.map((lang: Language, idx: number) => {
+                        if (languages.length - 1 === idx) return null;
+                        return (
+                            <SelectItem key={lang.id} value={lang.tag} disabled={lang.tag === lang_current}>
+                                {lang.tagRegion}
+                            </SelectItem>
+                        );
+                    })}
                 </SelectGroup>
             </SelectContent>
         </Select>

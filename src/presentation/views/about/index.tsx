@@ -7,6 +7,7 @@ import AxiosAdapter from "@/infra/http/axiosAdapter";
 import { ABOUT_ID } from "@/lib/data";
 import { ContactUs } from "@/presentation/components/ContactUs";
 import { Container } from "@/presentation/components/ContainerRoot";
+import { Card, Typography } from "@material-tailwind/react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { getCookie } from "cookies-next";
 import { useTranslations } from "next-intl";
@@ -58,7 +59,7 @@ export const AboutView = () => {
     return (
         <main className="w-full min-h-screen">
             <div
-                className="w-full h-[378px] bg-blue-500 pt-[105px] text-white"
+                className="w-full h-[378px] bg-primary-blue pt-[105px] text-white"
                 style={{
                     backgroundImage: `url(${IMG_URL})`,
                     backgroundSize: "cover",
@@ -142,7 +143,7 @@ export const AboutView = () => {
                                 ref={slideRef}
                                 options={{
                                     fixedWidth: 300,
-                                    fixedHeight: 340,
+                                    fixedHeight: 350,
                                     type: "loop",
                                     pagination: false,
                                     arrows: true,
@@ -151,6 +152,7 @@ export const AboutView = () => {
                                     drag: "free",
                                     interval: 3000,
                                     rewind: true,
+                                    gap: 24,
                                     speed: 800,
                                     perMove: 1,
                                     autoPlay: true,
@@ -178,14 +180,16 @@ const OficialCard = ({ item }: { item: ITeam }) => {
     const lang_current = getCookie("NEXT_LOCALE") as string;
     if (!item.id) return null;
     return (
-        <div className="w-[240px] h-[295px] cursor-pointer">
-            <div className="w-full h-[250px] border rounded-[6px]">
-                <img src={item.imageUrl} alt={item.name.tag[lang_current]} className="w-full h-full object-cover rounded-[6px]" />
-            </div>
-            <div className="w-[199.68px] h-[89px] mx-auto relative -mt-[50px] rounded-[4px] bg-white z-10 border shadow-md p-3 flex flex-col gap-2 items-center justify-center">
-                <span className="font-semibold">{item.name.tag[lang_current]}</span>
-                <span className="text-[14px] text-center text-blue-400">{item.job.tag[lang_current]}</span>
-            </div>
-        </div>
+        <>
+            <Card className="max-w-xs">
+                <Card.Header as="img" className="max-h-[240px]" src={item.imageUrl} alt={item.name.tag[lang_current]} />
+                <Card.Body className="text-center line-clamp-2">
+                    <Typography type="h5" className="text-slate-500 text-base">
+                        {item.name.tag[lang_current]}
+                    </Typography>
+                    <Typography className="my-1 text-foreground text-sm">{item.job.tag[lang_current]}</Typography>
+                </Card.Body>
+            </Card>
+        </>
     );
 };

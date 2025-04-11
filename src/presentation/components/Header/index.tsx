@@ -92,9 +92,9 @@ export const Header = () => {
 
     return (
         <section className="w-full h-20">
-            <header className="fixed top-0 flex justify-between z-30 bg-white dark:bg-black items-center h-20 w-full px-3 xl:px-0">
-                <div className="max-w-[1248px] mx-auto flex w-full justify-between">
-                    <div className="flex items-center gap-10">
+            <header className="fixed top-0 flex justify-between z-30 bg-white shadow-sm dark:bg-black items-center h-20 w-full px-3 xl:px-0">
+                <div className="max-w-[1248px] mx-auto flex w-full justify-between gap-20">
+                    <div className="flex items-center gap-10 w-full justify-between">
                         <h2 className="font-bold text-2xl cursor-pointer">
                             <Link href="/">
                                 <span className="text-primary-blue">LJ</span>ConstruTic
@@ -103,10 +103,12 @@ export const Header = () => {
                         <nav>
                             <ul className="lg:flex items-center hidden gap-4 lg:gap-6">
                                 {componentHeader?.items.map((item, idx: number) => {
-                                    if (idx > 3) return <></>;
+                                    if (idx > 3) return null;
                                     return (
                                         <a href={`/#${item.tagId}`} key={idx} onClick={(e) => handleClick(e, item.tagId)}>
-                                            <li className="cursor-pointer">{item?.tag[lang_current]!}</li>
+                                            <li className="cursor-pointer hover:text-primary-blue hover:font-semibold text-slate-600 text-lg dark:text-slate-100 font-semibold">
+                                                {item?.tag[lang_current]!}
+                                            </li>
                                         </a>
                                     );
                                 })}

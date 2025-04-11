@@ -31,6 +31,9 @@
         "title": "Nos produits",
         "contactButton": "Demander maintenant"
     },
+    "Goals": {
+        "title": "Objectifs"
+    },
     "Footer": {
         "copyright": "Droit d'auteur et copy; {year} Tous droits réservés"
     }

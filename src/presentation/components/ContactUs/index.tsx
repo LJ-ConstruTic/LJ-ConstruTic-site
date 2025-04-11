@@ -72,7 +72,11 @@ export const ContactUs = () => {
     }, []);
 
     return (
-        <section data-aos="fade-in" id={MENU_ID_LIST.CONTACT} className="w-full mt-[80px] lg:mt-[135px]">
+        <section
+            data-aos="fade-in"
+            id={MENU_ID_LIST.CONTACT}
+            className="w-full bg-fixed bg-primary-blue py-10 text-white mt-[80px] lg:mt-[135px]"
+        >
             <Container>
                 <section className="flex flex-col lg:flex-row w-full gap-10">
                     <div className="w-full h-[420px] lg:h-[679px] rounded-[14px] ">
@@ -99,6 +103,8 @@ export const ContactUs = () => {
                                     onChange={formik.handleChange}
                                     value={formik.values.name}
                                     name="name"
+                                    className="outline-none"
+                                    style={{ outline: "none" }}
                                     onBlur={formik.handleBlur}
                                 />
                                 {formik.touched.name && formik.errors.name && <ErrorMessage message={formik.errors.name} />}
@@ -111,6 +117,8 @@ export const ContactUs = () => {
                                     type="text"
                                     onChange={formik.handleChange}
                                     value={formik.values.phone}
+                                    className="outline-none"
+                                    style={{ outline: "none" }}
                                     name="phone"
                                     onBlur={formik.handleBlur}
                                 />
@@ -126,6 +134,8 @@ export const ContactUs = () => {
                                     value={formik.values.email}
                                     name="email"
                                     onBlur={formik.handleBlur}
+                                    className="outline-none"
+                                    style={{ outline: "none" }}
                                 />
                                 {formik.touched.email && formik.errors.email && <ErrorMessage message={formik.errors.email} />}
                             </div>
@@ -136,13 +146,14 @@ export const ContactUs = () => {
                                     value={formik.values.message}
                                     name="message"
                                     onBlur={formik.handleBlur}
-                                    className="resize-none"
+                                    className="resize-none focus:outline-none"
+                                    style={{ outline: "none" }}
                                 ></Textarea>
                                 {formik.touched.message && formik.errors.message && <ErrorMessage message={formik.errors.message} />}
                             </div>
 
                             <div>
-                                <Button type="submit" disabled={disabled} className="flex items-center bg-primary-blue gap-1 text-white">
+                                <Button type="submit" disabled={disabled} className="flex items-center bg-primary-green gap-1 text-white">
                                     <span>{t("buttonSend")}</span>
                                     <ArrowRight width={16} />
                                 </Button>

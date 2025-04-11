@@ -18,6 +18,7 @@ import { IGoal } from "@/domain/models/Goals";
 import { ComponentGatewayHttp } from "@/infra/gateway/component/componentGatewayHttp";
 import { ABOUT_ID, HOME_ID, PRODUCT_ID } from "@/lib/data";
 import { Component, Item } from "@/domain/models/component";
+import Loading from "@/presentation/components/loading";
 
 export const HomeView = () => {
     const httpClient = new AxiosAdapter();
@@ -32,6 +33,7 @@ export const HomeView = () => {
     const [goals, setGoal] = useState<IGoal[]>([]);
     const [bannerData, setBannerData] = useState<Item[]>([]);
     const [aboutComponent, setAboutComponent] = useState<Component>();
+    const [loading, setLoading] = useState(true);
 
     async function GetProducts() {
         try {
@@ -98,14 +100,21 @@ export const HomeView = () => {
     }
 
     useEffect(function getAllDatas() {
+        setLoading(true);
         GetProducts();
         GetServices();
         GetGoals();
         GetHomeDatas();
         GetProductComponent();
         GetInfoAbout();
+        setTimeout(() => {
+            setLoading(false);
+        }, 2000);
     }, []);
 
+    if (loading) {
+        return <Loading />;
+    }
     return (
         <main>
             <Banner bannerData={bannerData!} />

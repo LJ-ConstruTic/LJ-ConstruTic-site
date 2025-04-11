@@ -21,16 +21,16 @@ const HamburgerMenu = () => {
                 }`}
             >
                 <ul className="flex flex-col space-y-2 p-4">
-                    <li>
+                    <li className="hover:text-primary-blue hover:font-semibold">
                         <a href="/#aboutus">Quem somos</a>
                     </li>
-                    <li>
+                    <li className="hover:text-primary-blue hover:font-semibold">
                         <a href="/#products">Produtos</a>
                     </li>
-                    <li>
+                    <li className="hover:text-primary-blue hover:font-semibold">
                         <a href="/#services">Serviços</a>
                     </li>
-                    <li>
+                    <li className="hover:text-primary-blue hover:font-semibold">
                         <a href="/#contact">Contato</a>
                     </li>
                 </ul>

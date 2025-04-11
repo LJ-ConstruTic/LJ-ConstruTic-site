@@ -8,7 +8,6 @@ import { useEffect, useState } from "react";
 import { HEADER_ID } from "@/lib/data";
 import { usePathname, useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { escapeHtml } from "@/lib/utils";
 
 export const Footer = () => {
     const lang_current = getCookie("NEXT_LOCALE") as string;
@@ -68,25 +67,26 @@ export const Footer = () => {
     }, []);
 
     return (
-        <footer className="w-full py-10 bg-gray-200 dark:bg-black mt-8">
+        <footer className="w-full py-10 bg-black">
             <Container>
                 <div className="w-full flex flex-col  py-6 gap-6">
                     <h1 className="font-bold text-2xl text-left">
-                        <span className="text-primary-blue">LJ</span>ConstruTic
+                        <span className="text-primary-blue">LJ</span>
+                        <span className="text-white">ConstruTic</span>
                     </h1>
                     <div className="flex justify-between gap-10">
                         <ul className="flex flex-col  gap-2  text-sm">
                             {componentHeader?.items.map((item, idx: number) => {
-                                if (idx > 3) return <></>;
+                                if (idx > 3) return null;
                                 return (
-                                    <a href={`/#${item.tagId}`} onClick={(e) => handleClick(e, item.tagId)}>
-                                        <li className="cursor-pointer">{item?.tag[lang_current]!}</li>
+                                    <a href={`/#${item.tagId}`} key={item.tagId} onClick={(e) => handleClick(e, item.tagId)}>
+                                        <li className="cursor-pointer text-white">{item?.tag[lang_current]!}</li>
                                     </a>
                                 );
                             })}
                         </ul>
 
-                        <div className="text-sm flex gap-10">
+                        <div className="text-sm flex gap-10 text-slate-50">
                             <p>
                                 Luís José - Construção e Soluções Tecnológicas LDA, <br />
                                 Santa Cruz - Vila, Lobito, Benguela
@@ -100,7 +100,7 @@ export const Footer = () => {
                 </div>
 
                 {/* Footer Bottom */}
-                <div className="w-full border-t border-gray-300 dark:border-gray-700 py-4 text-center">
+                <div className="w-full border-t border-gray-300 text-white dark:border-gray-700 py-4 text-center">
                     <span className="text-sm" dangerouslySetInnerHTML={{ __html: message }} />
                 </div>
             </Container>

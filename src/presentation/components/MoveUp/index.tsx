@@ -34,7 +34,7 @@ export const MoveUpButton = () => {
             {isVisible && (
                 <button
                     onClick={scrollToTop}
-                    className="fixed bottom-5 cursor-pointer right-5 p-3 rounded-full bg-primary-blue text-white shadow-md hover:brightness-75 transition-all"
+                    className="fixed bottom-5 cursor-pointer right-5 p-3 rounded-full bg-primary-green text-white shadow-md hover:brightness-75 transition-all"
                     aria-label="Voltar ao topo"
                 >
                     <MoveUp className="w-5 h-5" />
