@@ -20,7 +20,7 @@ export function ToogleLanguage({ languages }: props) {
         router.replace(pathname, { locale: locale });
     }
     return (
-        <Select className="outline-none!" onValueChange={(locale) => toogleLanguage(locale)} defaultValue={lang_current ?? "pt"}>
+        <Select onValueChange={(locale) => toogleLanguage(locale)} defaultValue={lang_current ?? "pt"}>
             <SelectTrigger className="md:w-[120px] w-[8rem] sm:w-[100px]">
                 <SelectValue placeholder={lang_current} />
             </SelectTrigger>
