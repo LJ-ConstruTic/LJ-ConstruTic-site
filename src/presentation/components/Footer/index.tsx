@@ -69,13 +69,13 @@ export const Footer = () => {
     return (
         <footer className="w-full py-10 bg-black">
             <Container>
-                <div className="w-full flex flex-col  py-6 gap-6">
+                <div className="w-full flex flex-col py-6 gap-6">
                     <h1 className="font-bold text-2xl text-left">
                         <span className="text-primary-blue">LJ</span>
                         <span className="text-white">ConstruTic</span>
                     </h1>
-                    <div className="flex justify-between gap-10">
-                        <ul className="flex flex-col  gap-2  text-sm">
+                    <div className="flex flex-col md:flex-col justify-between gap-10">
+                        <ul className="flex flex-col gap-2  text-sm">
                             {componentHeader?.items.map((item, idx: number) => {
                                 if (idx > 3) return null;
                                 return (
@@ -86,7 +86,7 @@ export const Footer = () => {
                             })}
                         </ul>
 
-                        <div className="text-sm flex gap-10 text-slate-50">
+                        <div className="text-sm flex flex-col md:flex-row gap-10 text-slate-50">
                             <p>
                                 Luís José - Construção e Soluções Tecnológicas LDA, <br />
                                 Santa Cruz - Vila, Lobito, Benguela

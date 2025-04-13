@@ -22,25 +22,26 @@ export const OurProducts: React.FC<props> = ({ products, productComponent }) => 
     return (
         <Container>
             <section id={MENU_ID_LIST.PRODUCTS} className="w-full mt-10 xl:mt-[50px]">
-                <h2 data-aos="fade-up" className="font-bold text-[32px] text-slate-700 dark:text-slate-100 text-center">
+                <h2 data-aos="fade-up" className="font-bold text-[24px] md:text-[32px] text-slate-700 dark:text-slate-100 text-center">
                     {productComponent?.items[0].tag[lang_current]!}
                 </h2>
-                <div data-aos="fade-up" className="mt-4 w-full flex">
+                <div data-aos="fade-up" className="mt-4 w-full cursor-move reset-padding-margin">
                     <Splide
                         options={{
                             type: "loop",
+                            fixedWidth: "auto",
+                            fixedHeight: "auto",
+                            width: "100%",
+                            gap: 20,
                             pagination: true,
                             arrows: false,
-                            perPage: 3,
+                            perPage: 1,
+                            perMove: 1,
                             drag: "free",
-                            width: "100%",
-                            gap: "10px",
                             interval: 3000,
                             rewind: true,
                             speed: 800,
-                            perMove: 1,
-                            autoPlay: true,
-                            loop: true,
+                            autoplay: true,
                         }}
                         style={{ padding: 0, margin: 0 }}
                     >
@@ -62,18 +63,17 @@ export const ProductCard = ({ item, tagRegion }: { item: IProduct; tagRegion: st
     const t = useTranslations("About");
     return (
         <>
-            <Card className="max-w-xs dark:bg-black ">
+            <Card className="xl:w-[320px] max-h-[400px] h-full w-full dark:bg-black ">
                 <Card.Header
-                    className="max-h-[250px] text-slate-800 dark:text-slate-100"
+                    className="md:max-h-[200px] p-2 max-h-[200px] h-[150px] md:h-full text-slate-800 dark:text-slate-100"
                     as="img"
                     src={item?.imageUrl ?? "image"}
                     alt={item?.title?.tag[tagRegion]!}
                 />
                 <Card.Body className="0">
-                    <Typography type="h6" className="text-slate-800 dark:text-slate-100">
+                    <Typography type="h6" className="text-slate-800 text-sm md:text-base dark:text-slate-100">
                         {item?.title?.tag[tagRegion]!}
                     </Typography>
-                    <Typography className="my-1 text-foreground">{/* {item?.description?.tag[tagRegion]!} */}</Typography>
                 </Card.Body>
                 <Card.Footer>
                     <Button className="dark:border-none border-none bg-primary-green dark:text-white">{t("buttonMore")}</Button>

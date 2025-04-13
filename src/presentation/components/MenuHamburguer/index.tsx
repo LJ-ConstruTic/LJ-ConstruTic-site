@@ -2,7 +2,11 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 
-const HamburgerMenu = () => {
+type Props = {
+    children: React.ReactNode;
+};
+
+const HamburgerMenu = ({ children }: Props) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -33,6 +37,7 @@ const HamburgerMenu = () => {
                     <li className="hover:text-primary-blue hover:font-semibold">
                         <a href="/#contact">Contato</a>
                     </li>
+                    <li>{children}</li>
                 </ul>
             </nav>
         </div>

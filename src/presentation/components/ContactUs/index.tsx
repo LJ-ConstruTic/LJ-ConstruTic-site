@@ -107,7 +107,7 @@ export const ContactUs = () => {
                                     style={{ outline: "none" }}
                                     onBlur={formik.handleBlur}
                                 />
-                                {formik.touched.name && formik.errors.name && <ErrorMessage message={formik.errors.name} />}
+                                {formik.touched.name && formik.errors.name ? <ErrorMessage message={formik.errors.name} /> : null}
                             </div>
                             <div className="flex flex-col gap-1">
                                 <label htmlFor="" className="text-sm lg:text-base">
@@ -122,7 +122,7 @@ export const ContactUs = () => {
                                     name="phone"
                                     onBlur={formik.handleBlur}
                                 />
-                                {formik.touched.phone && formik.errors.phone && <ErrorMessage message={formik.errors.phone} />}
+                                {formik.touched.phone && formik.errors.phone ? <ErrorMessage message={formik.errors.phone} /> : null}
                             </div>
                             <div className="flex flex-col gap-1">
                                 <label htmlFor="" className="text-sm lg:text-base">
@@ -137,7 +137,7 @@ export const ContactUs = () => {
                                     className="outline-none"
                                     style={{ outline: "none" }}
                                 />
-                                {formik.touched.email && formik.errors.email && <ErrorMessage message={formik.errors.email} />}
+                                {formik.touched.email && formik.errors.email ? <ErrorMessage message={formik.errors.email} /> : null}
                             </div>
                             <div>
                                 <Textarea
@@ -149,7 +149,7 @@ export const ContactUs = () => {
                                     className="resize-none focus:outline-none"
                                     style={{ outline: "none" }}
                                 ></Textarea>
-                                {formik.touched.message && formik.errors.message && <ErrorMessage message={formik.errors.message} />}
+                                {formik.touched.message && formik.errors.message ? <ErrorMessage message={formik.errors.message} /> : null}
                             </div>
 
                             <div>

@@ -31,7 +31,7 @@ export const MoveUpButton = () => {
 
     return (
         <div>
-            {isVisible && (
+            {isVisible ? (
                 <button
                     onClick={scrollToTop}
                     className="fixed bottom-5 cursor-pointer right-5 p-3 rounded-full bg-primary-green text-white shadow-md hover:brightness-75 transition-all"
@@ -39,7 +39,7 @@ export const MoveUpButton = () => {
                 >
                     <MoveUp className="w-5 h-5" />
                 </button>
-            )}
+            ) : null}
         </div>
     );
 };

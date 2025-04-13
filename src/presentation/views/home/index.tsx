@@ -109,7 +109,7 @@ export const HomeView = () => {
         GetInfoAbout();
         setTimeout(() => {
             setLoading(false);
-        }, 2000);
+        }, 500);
     }, []);
 
     if (loading) {

@@ -8,7 +8,7 @@ export default class AxiosAdapter implements HttpClient {
     private axiosInstance: AxiosInstance;
 
     constructor() {
-        this.baseURL = process.env.NEXT_API_URL ?? "https://api-v2.ljconstrutic.com/v1";
+        this.baseURL = process.env.NEXT_API_URL || "https://api-v2.ljconstrutic.com/v1";
         this.axiosInstance = axios.create({
             baseURL: this.baseURL,
             headers: {

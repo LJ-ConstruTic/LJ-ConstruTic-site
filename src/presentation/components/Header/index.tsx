@@ -95,7 +95,7 @@ export const Header = () => {
             <header className="fixed top-0 flex justify-between z-30 bg-white shadow-sm dark:bg-black items-center h-20 w-full px-3 xl:px-0">
                 <div className="max-w-[1248px] mx-auto flex w-full justify-between gap-20">
                     <div className="flex items-center gap-10 w-full justify-between">
-                        <h2 className="font-bold text-2xl cursor-pointer">
+                        <h2 className="font-bold text-xl md:text-2xl cursor-pointer">
                             <Link href="/">
                                 <span className="text-primary-blue">LJ</span>ConstruTic
                             </Link>
@@ -116,9 +116,13 @@ export const Header = () => {
                         </nav>
                     </div>
                     <div className="flex items-center gap-1 flex-1 justify-end">
-                        <ToogleLanguage languages={languages} />
+                        <div className="hidden lg:block">
+                            <ToogleLanguage languages={languages} />
+                        </div>
                         <ModeToggle />
-                        <HamburgerMenu />
+                        <HamburgerMenu>
+                            <ToogleLanguage languages={languages} />
+                        </HamburgerMenu>
                     </div>
                 </div>
             </header>

@@ -59,9 +59,9 @@ export const AboutView = () => {
     return (
         <main className="w-full min-h-screen">
             <div
-                className="w-full h-[378px] bg-primary-blue pt-[105px] text-white"
+                className="w-full h-[378px] bg-primary-blue bg-opacity-95 pt-[105px] text-white"
                 style={{
-                    backgroundImage: `url(${IMG_URL})`,
+                    backgroundImage: `url(${IMG1})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
@@ -131,8 +131,8 @@ export const AboutView = () => {
                     </div>
                 </section>
             </Container>
-            {Teams && (
-                <section className="w-full bg-[#FBFBFB] dark:bg-black h-[564px] mt-[95px]">
+            {Teams ? (
+                <section className="w-full bg-[#FBFBFB] dark:bg-black h-auto mt-20 xl:mt-[95px]">
                     <Container>
                         <div className="flex items-center gap-2 pt-[36px]">
                             <span className="text-[28px] text-green-400">{t("our")}</span>
@@ -146,7 +146,7 @@ export const AboutView = () => {
                                     fixedHeight: 350,
                                     type: "loop",
                                     pagination: false,
-                                    arrows: true,
+                                    arrows: false,
                                     perPage: 1,
                                     width: "100%",
                                     drag: "free",
@@ -160,17 +160,18 @@ export const AboutView = () => {
                                 }}
                                 style={{ width: "100%", padding: 0, margin: 0 }}
                             >
-                                {Teams &&
-                                    Teams.items?.map((item: any) => (
-                                        <SplideSlide key={item.id}>
-                                            <OficialCard key={item.id} item={item} />
-                                        </SplideSlide>
-                                    ))}
+                                {Teams
+                                    ? Teams.items?.map((item: any) => (
+                                          <SplideSlide key={item.id}>
+                                              <OficialCard key={item.id} item={item} />
+                                          </SplideSlide>
+                                      ))
+                                    : null}
                             </Splide>
                         </section>
                     </Container>
                 </section>
-            )}
+            ) : null}
             <ContactUs />
         </main>
     );

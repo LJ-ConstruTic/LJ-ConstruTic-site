@@ -47,7 +47,7 @@ export const AboutUs = ({ aboutComponent }: props) => {
                         </Button>
                     </div>
                 </div>
-                <div className="xl:w-[473.82px] w-full h-[340px] flex  xl:hidden rounded-[14px] bg-black">
+                <div className="xl:w-[473.82px] w-full h-[200px] md:h-[340px] flex  xl:hidden rounded-[14px] bg-black">
                     <img src={IMG1} className="w-full h-full object-cover rounded-[14px]" alt="" />
                 </div>
             </section>
