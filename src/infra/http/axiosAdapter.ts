@@ -13,6 +13,7 @@ export default class AxiosAdapter implements HttpClient {
             baseURL: this.baseURL,
             headers: {
                 "Content-Type": "application/json",
+                "X-Requested-With": "XMLHttpRequest",
             },
         });
     }
