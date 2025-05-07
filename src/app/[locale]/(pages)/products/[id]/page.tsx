@@ -30,7 +30,6 @@ export default function ProductPage({ params }: { params: { id: string } }) {
             setProduct(response);
             setIsLoading(false);
         } catch (error) {
-            console.error(error);
             window.location.replace("/not-found");
         }
     }
@@ -62,10 +61,10 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                         <h2 className="font-bold text-2xl">{product?.title?.tag[lang_current]!}</h2>
                     </div>
                     <div className="flex flex-col gap-6 text-sm text-justify lg:text-start">
-                        <p>{product?.description!}  </p>
+                        <p className="dark:text-slate-100 text-black">{product?.description?.tag[lang_current]!}  </p>
                     </div>
                     <div>
-                        <Button className="bg-primary-green text-white flex gap-1">
+                        <Button className="bg-primary-blue text-white flex gap-1">
                             <span>{t("contactButton")}</span>
                             <ArrowRight />
                         </Button>

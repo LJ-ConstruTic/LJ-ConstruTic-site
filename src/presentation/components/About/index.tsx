@@ -20,7 +20,7 @@ export const AboutUs = ({ aboutComponent }: props) => {
     const lang_current = getCookie("NEXT_LOCALE") as string;
     const t = useTranslations("About");
     return (
-        <main className="bg-primary-blue dark:bg-black w-full h-auto">
+        <main className="bg-white dark:bg-black w-full h-auto">
             <section
                 id={MENU_ID_LIST.WHOARE}
                 className="xl:max-w-[1248px] mx-auto w-full xl:h-[529px] h-auto px-3 xl:px-0 py-4 xl:py-0 gap-5 xl:gap-0 mt-[20px] lg:mt-[80px] flex flex-col xl:flex-row items-center dark:bg-black"
@@ -34,12 +34,14 @@ export const AboutUs = ({ aboutComponent }: props) => {
                     </div>
                 </div>
                 <div data-aos="fade-left" className="w-full flex flex-col gap-8">
-                    <h3 className="font-bold text-2xl text-slate-100">{aboutComponent?.items[0]?.tag[lang_current]!}</h3>
-                    <p className="xl:max-w-[579.15px] text-sm text-justify text-slate-50 xl:text-start xl:text-base">
+                    <h3 className="font-bold text-2xl text-slate-950 dark:text-slate-100">
+                        {aboutComponent?.items[0]?.tag[lang_current]!}
+                    </h3>
+                    <p className="xl:max-w-[579.15px] text-sm text-justify text-gray-950 dark:text-gray-100 xl:text-start xl:text-base">
                         {aboutComponent?.items[1]?.tag[lang_current]!}
                     </p>
                     <div>
-                        <Button className="bg-primary-green flex items-center gap-1  dark:text-white">
+                        <Button className="bg-primary-blue flex items-center gap-1  dark:text-white">
                             <Link href="/about">
                                 <span>{t("buttonMore")}</span>
                             </Link>

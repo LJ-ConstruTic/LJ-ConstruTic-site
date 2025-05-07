@@ -37,18 +37,14 @@ export const AboutView = () => {
         try {
             const response = (await componentGatewayHttp.getComponentByTag(ABOUT_ID)) as Component;
             setAboutComponent(response);
-        } catch (error) {
-            console.error(error);
-        }
+        } catch (error) {}
     }
 
     async function GetTeams() {
         try {
             const response = await teamGatewayHttp.getTeam();
             setTeams(response);
-        } catch (error) {
-            console.error(error);
-        }
+        } catch (error) {}
     }
 
     useEffect(() => {
@@ -185,7 +181,7 @@ const OficialCard = ({ item }: { item: ITeam }) => {
             <Card className="max-w-xs">
                 <Card.Header as="img" className="max-h-[240px]" src={item.imageUrl} alt={item.name.tag[lang_current]} />
                 <Card.Body className="text-center line-clamp-2">
-                    <Typography type="h5" className="text-slate-500 text-base">
+                    <Typography type="h5" className="text-slate-900 dark:text-slate-200 text-base">
                         {item.name.tag[lang_current]}
                     </Typography>
                     <Typography className="my-1 text-foreground text-sm">{item.job.tag[lang_current]}</Typography>

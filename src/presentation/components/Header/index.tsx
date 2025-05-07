@@ -43,9 +43,7 @@ export const Header = () => {
         try {
             const response = (await componentGateway.getComponentByTag(HEADER_ID)) as Component;
             setComponentHeader(response);
-        } catch (error) {
-            console.error(error);
-        }
+        } catch (error) {}
     }
 
     useEffect(function getLanguages() {

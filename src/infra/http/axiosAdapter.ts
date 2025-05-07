@@ -4,7 +4,7 @@ import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
 export type HttpRequestConfig = AxiosRequestConfig;
 
 export default class AxiosAdapter implements HttpClient {
-    private baseURL: string;
+    private baseURL: string | undefined;
     private axiosInstance: AxiosInstance;
 
     constructor() {
@@ -13,7 +13,6 @@ export default class AxiosAdapter implements HttpClient {
             baseURL: this.baseURL,
             headers: {
                 "Content-Type": "application/json",
-                "X-Requested-With": "XMLHttpRequest",
             },
         });
     }

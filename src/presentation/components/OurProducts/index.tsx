@@ -63,7 +63,7 @@ export const ProductCard = ({ item, tagRegion }: { item: IProduct; tagRegion: st
     const t = useTranslations("About");
     return (
         <>
-            <Card className="xl:w-[320px] max-h-[400px] h-full w-full dark:bg-black ">
+            <Card className="xl:w-[250px] max-h-[400px] h-full w-full dark:bg-black ">
                 <Card.Header
                     className="md:max-h-[200px] p-2 max-h-[200px] h-[150px] md:h-full text-slate-800 dark:text-slate-100"
                     as="img"
@@ -76,7 +76,7 @@ export const ProductCard = ({ item, tagRegion }: { item: IProduct; tagRegion: st
                     </Typography>
                 </Card.Body>
                 <Card.Footer>
-                    <Button className="dark:border-none border-none bg-primary-green dark:text-white">{t("buttonMore")}</Button>
+                    <Button className="dark:border-none border-none bg-primary-blue dark:text-white">{t("buttonMore")}</Button>
                 </Card.Footer>
             </Card>
         </>

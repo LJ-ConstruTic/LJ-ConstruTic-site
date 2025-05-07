@@ -88,7 +88,7 @@ export const Banner = ({ bannerData }: props) => {
                                         </p>
                                         <div className="flex justify-center md:justify-start">
                                             <a href="#contact" onClick={(e) => handleClick(e, "contact")}>
-                                                <Button className="rounded-full md:px-5 px-3 bg-primary-green dark:text-white py-5 md:py-8 flex gap-1 items-center">
+                                                <Button className="rounded-full md:px-5 px-3 bg-primary-blue dark:text-white py-5 md:py-8 flex gap-1 items-center">
                                                     <span>{t("buttonContact")}</span>
                                                     <ArrowRight width={16} />
                                                 </Button>
@@ -98,7 +98,7 @@ export const Banner = ({ bannerData }: props) => {
                                 </section>
                                 <div className="w-full h-full bg-black relative">
                                     <img src={item.imgUrl} alt="" className="w-full h-[400px] xl:h-[580px] object-cover" />
-                                    <div className="absolute inset-0 bg-black opacity-65"></div>
+                                    <div className="absolute inset-0 bg-black opacity-85"></div>
                                 </div>
                             </main>
                         </SplideSlide>

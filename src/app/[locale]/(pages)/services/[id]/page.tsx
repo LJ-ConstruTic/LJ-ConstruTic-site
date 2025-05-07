@@ -30,7 +30,6 @@ export default function ServicePage({ params }: { params: { id: string } }) {
             setService(response);
             setIsLoandig(false);
         } catch (error) {
-            console.error(error);
             window.location.replace("/not-found");
             setIsLoandig(false);
         }
@@ -57,7 +56,7 @@ export default function ServicePage({ params }: { params: { id: string } }) {
                         <p>{service?.description?.tag[lang_current]}</p>
                     </div>
                     <div>
-                        <Button className="bg-primary-green text-white flex gap-1">
+                        <Button className="bg-primary-blue text-white flex gap-1">
                             <span>{t("contactButton")}</span>
                             <ArrowRight />
                         </Button>

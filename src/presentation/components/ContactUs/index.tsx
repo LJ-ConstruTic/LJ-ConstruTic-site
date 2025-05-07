@@ -75,7 +75,7 @@ export const ContactUs = () => {
         <section
             data-aos="fade-in"
             id={MENU_ID_LIST.CONTACT}
-            className="w-full bg-fixed bg-primary-blue py-10 text-white mt-[80px] lg:mt-[135px]"
+            className="w-full bg-fixed bg-white dark:bg-black py-10 text-white mt-[80px] lg:mt-[135px]"
         >
             <Container>
                 <section className="flex flex-col lg:flex-row w-full gap-10">
@@ -90,12 +90,16 @@ export const ContactUs = () => {
                     </div>
                     <div className="w-full">
                         <div className="flex flex-col gap-3">
-                            <h2 className="font-bold text-xl lg:text-2xl">{contactComponent?.items[0].tag[lang_current]!}</h2>
-                            <span className="text-sm">{contactComponent?.items[1].tag[lang_current]!}</span>
+                            <h2 className="font-bold text-xl lg:text-2xl text-slate-950 dark:text-slate-100">
+                                {contactComponent?.items[0].tag[lang_current]!}
+                            </h2>
+                            <span className="text-sm text-slate-950 dark:text-slate-100">
+                                {contactComponent?.items[1].tag[lang_current]!}
+                            </span>
                         </div>
                         <form onSubmit={formik.handleSubmit} className="mt-5 flex flex-col gap-5">
                             <div className="flex flex-col gap-1">
-                                <label htmlFor="" className="text-sm lg:text-base">
+                                <label htmlFor="" className="text-sm text-slate-900 dark:text-slate-100 lg:text-base">
                                     {contactComponent?.items[3].tag[lang_current]!}
                                 </label>
                                 <Input
@@ -110,7 +114,7 @@ export const ContactUs = () => {
                                 {formik.touched.name && formik.errors.name ? <ErrorMessage message={formik.errors.name} /> : null}
                             </div>
                             <div className="flex flex-col gap-1">
-                                <label htmlFor="" className="text-sm lg:text-base">
+                                <label htmlFor="" className="text-sm text-slate-900 dark:text-slate-100 lg:text-base">
                                     {contactComponent?.items[4].tag[lang_current]!}
                                 </label>
                                 <Input
@@ -125,7 +129,7 @@ export const ContactUs = () => {
                                 {formik.touched.phone && formik.errors.phone ? <ErrorMessage message={formik.errors.phone} /> : null}
                             </div>
                             <div className="flex flex-col gap-1">
-                                <label htmlFor="" className="text-sm lg:text-base">
+                                <label htmlFor="" className="text-sm text-slate-900 dark:text-slate-100 lg:text-base">
                                     {contactComponent?.items[5].tag[lang_current]!}
                                 </label>
                                 <Input
@@ -146,14 +150,14 @@ export const ContactUs = () => {
                                     value={formik.values.message}
                                     name="message"
                                     onBlur={formik.handleBlur}
-                                    className="resize-none focus:outline-none"
+                                    className="resize-none focus:outline-none text-slate-900"
                                     style={{ outline: "none" }}
                                 ></Textarea>
                                 {formik.touched.message && formik.errors.message ? <ErrorMessage message={formik.errors.message} /> : null}
                             </div>
 
                             <div>
-                                <Button type="submit" disabled={disabled} className="flex items-center bg-primary-green gap-1 text-white">
+                                <Button type="submit" disabled={disabled} className="flex items-center bg-primary-blue gap-1 text-white">
                                     <span>{t("buttonSend")}</span>
                                     <ArrowRight width={16} />
                                 </Button>

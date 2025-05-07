@@ -2,7 +2,9 @@ export interface IProduct {
     id: string;
     idx: number;
     title?: Title;
-    description?: string;
+    description?: {
+        tag: { pt: string; umb: string; en: string; es: string } | any;
+    };
     imageUrl: string;
     createdAt?: string;
     updatedAt?: string;

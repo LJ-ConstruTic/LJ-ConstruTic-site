@@ -39,27 +39,21 @@ export const HomeView = () => {
         try {
             const response = await productGatewayHttp.getAllProducts();
             setProduct(response);
-        } catch (error) {
-            console.error(error);
-        }
+        } catch (error) {}
     }
 
     async function GetInfoAbout() {
         try {
             const response = (await componentGatewayHttp.getComponentByTag(ABOUT_ID)) as Component;
             setAboutComponent(response);
-        } catch (error) {
-            console.error(error);
-        }
+        } catch (error) {}
     }
 
     async function GetProductComponent() {
         try {
             const response = (await componentGatewayHttp.getComponentByTag(PRODUCT_ID)) as Component;
             setProductComponent(response);
-        } catch (error) {
-            console.error(error);
-        }
+        } catch (error) {}
     }
 
     async function GetHomeDatas() {
@@ -76,27 +70,21 @@ export const HomeView = () => {
                     setBannerData(banner);
                 }
             }
-        } catch (error) {
-            console.error(error);
-        }
+        } catch (error) {}
     }
 
     async function GetServices() {
         try {
             const response = await serviceGatewayHttp.getServices();
             setService(response);
-        } catch (error) {
-            console.error(error);
-        }
+        } catch (error) {}
     }
 
     async function GetGoals() {
         try {
             const response = await goalGatewayHttp.getGoals();
             setGoal(response);
-        } catch (error) {
-            console.error(error);
-        }
+        } catch (error) {}
     }
 
     useEffect(function getAllDatas() {

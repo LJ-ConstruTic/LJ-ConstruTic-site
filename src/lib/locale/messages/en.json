@@ -24,7 +24,8 @@
     },
     "Services": {
         "title": "Our Services",
-        "contactButton": "request now"
+        "contactButton": "request now",
+        "buttonMore": "read more"
     },
     "Products": {
         "title": "Our Products",

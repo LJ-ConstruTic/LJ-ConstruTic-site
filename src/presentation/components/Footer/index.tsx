@@ -24,9 +24,7 @@ export const Footer = () => {
         try {
             const response = (await componentGateway.getComponentByTag(HEADER_ID)) as Component;
             setComponentHeader(response);
-        } catch (error) {
-            console.error(error);
-        }
+        } catch (error) {}
     }
     const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
         e.preventDefault();
@@ -67,7 +65,7 @@ export const Footer = () => {
     }, []);
 
     return (
-        <footer className="w-full py-10 bg-black">
+        <footer className="w-full py-10 bg-black dark:border-t-2">
             <Container>
                 <div className="w-full flex flex-col py-6 gap-6">
                     <h1 className="font-bold text-2xl text-left">

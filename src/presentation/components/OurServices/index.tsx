@@ -45,7 +45,7 @@ export const ServiceItem = ({ item }: { item: IService }) => {
                         {item?.name?.tag[lang_current]!}
                     </Typography>
                     <a href={`/services/${item.idx}`} className="inline-block">
-                        <Button className="flex items-center  gap-2 dark:text-white bg-primary-green border-none">
+                        <Button className="flex items-center  gap-2 dark:text-white bg-primary-blue border-none">
                             <span>{t("buttonMore")}</span>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
