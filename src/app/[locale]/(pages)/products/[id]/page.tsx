@@ -1,28 +1,35 @@
 "use client";
-
 import { IProduct } from "@/domain/models/Product";
 import ProductGatewayHttp from "@/infra/gateway/product/productGatewayHttp";
 import AxiosAdapter from "@/infra/http/axiosAdapter";
+import { CONTACT_ID, MENU_ID_LIST } from "@/lib/data";
 import { ContactUs } from "@/presentation/components/ContactUs";
+import { useScroll } from "@/presentation/components/Header/useScroll";
 import Loading from "@/presentation/components/loading";
 import { Button } from "@/presentation/components/ui/button";
 import { getCookie } from "cookies-next";
 import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function ProductPage({ params }: { params: { id: string } }) {
     const [product, setProduct] = useState<IProduct>();
     const [isLoading, setIsLoading] = useState(true);
+    const { handleClick, targetId } = useScroll();
     const httpClient = new AxiosAdapter();
     const productGatewayHttp = new ProductGatewayHttp(httpClient);
     const t = useTranslations("Products");
     const lang_current = getCookie("NEXT_LOCALE") as string;
+    const router = useRouter();
 
     async function getProduct(productId: string) {
         try {
             const response = await productGatewayHttp.getProductById(productId);
+            console.log(response, "response");
+
             if (response?.result === 0) {
                 window.location.replace("/not-found");
                 return;
@@ -60,11 +67,14 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                         <h3 className="text-green-500">{t("title")}</h3>
                         <h2 className="font-bold text-2xl">{product?.title?.tag[lang_current]!}</h2>
                     </div>
-                    <div className="flex flex-col gap-6 text-sm text-justify lg:text-start">
-                        <p className="dark:text-slate-100 text-black">{product?.description?.tag[lang_current]!}  </p>
+                    <div className="flex flex-col gap-6 text-lg text-justify lg:text-start">
+                        <p className="dark:text-slate-100 text-black">{product?.children[0]?.tag[lang_current]! ?? ""}</p>
                     </div>
                     <div>
-                        <Button className="bg-primary-blue text-white flex gap-1">
+                        <Button
+                            onClick={(e: any) => handleClick(e, MENU_ID_LIST.CONTACT)}
+                            className="bg-primary-blue text-white flex gap-1"
+                        >
                             <span>{t("contactButton")}</span>
                             <ArrowRight />
                         </Button>

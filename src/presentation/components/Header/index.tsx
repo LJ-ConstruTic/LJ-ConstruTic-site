@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ToogleLanguage } from "../SelectLanguage";
 import { ModeToggle } from "../ui/toogleMode";
-import { usePathname, useRouter } from "next/navigation";
 import { HamburgerMenu } from "../MenuHamburguer";
 import { Language } from "@/domain/models/Language";
 import AxiosAdapter from "@/infra/http/axiosAdapter";
@@ -13,12 +12,11 @@ import { ComponentGatewayHttp } from "@/infra/gateway/component/componentGateway
 import { HEADER_ID } from "@/lib/data";
 import { Component } from "@/domain/models/component";
 import { getCookie } from "cookies-next";
+import { useScroll } from "./useScroll";
 
 export const Header = () => {
     const lang_current = getCookie("NEXT_LOCALE") as string;
-    const pathname = usePathname();
-    const router = useRouter();
-    const [targetId, setTargetId] = useState<string | null>(null);
+    const { handleClick } = useScroll();
     const [languages, setLanguages] = useState<Language[]>();
     const [componentHeader, setComponentHeader] = useState<Component>();
     const httpClient = new AxiosAdapter();
@@ -53,40 +51,6 @@ export const Header = () => {
     useEffect(function () {
         getComponentHeader();
     }, []);
-
-    const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
-        e.preventDefault();
-
-        if (pathname === "/") {
-            const targetElement = document.getElementById(targetId);
-            if (targetElement) {
-                setTimeout(() => {
-                    targetElement.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                    });
-                }, 200);
-            }
-        } else {
-            setTargetId(targetId);
-            router.push("/#" + targetId);
-        }
-    };
-
-    useEffect(() => {
-        if (targetId) {
-            const targetElement = document.getElementById(targetId);
-            if (targetElement) {
-                setTimeout(() => {
-                    targetElement.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                    });
-                }, 200);
-                setTargetId(null);
-            }
-        }
-    }, [targetId]);
 
     return (
         <section className="w-full h-20">
