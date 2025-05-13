@@ -68,7 +68,15 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                         <h2 className="font-bold text-2xl">{product?.title?.tag[lang_current]!}</h2>
                     </div>
                     <div className="flex flex-col gap-6 text-lg text-justify lg:text-start">
-                        <p className="dark:text-slate-100 text-black">{product?.children[0]?.tag[lang_current]! ?? ""}</p>
+                        {product?.children?.map((item: { tag: any; id: number }, idx: number) => {
+                            return (
+                                <p
+                                    key={idx}
+                                    className="dark:text-slate-100 text-black text-justify"
+                                    dangerouslySetInnerHTML={{ __html: item.tag[lang_current]! }}
+                                ></p>
+                            );
+                        })}
                     </div>
                     <div>
                         <Button

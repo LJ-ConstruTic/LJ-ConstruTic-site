@@ -32,10 +32,30 @@ export const OurProducts: React.FC<props> = ({ products, productComponent }) => 
                             fixedWidth: "auto",
                             fixedHeight: "auto",
                             width: "100%",
-                            gap: 20,
+                            gap: 40,
+                            breakpoints: {
+                                640: {
+                                    fixedWidth: "auto",
+                                    fixedHeight: "auto",
+                                    perPage: 1,
+                                    gap: 10,
+                                },
+                                768: {
+                                    fixedWidth: "auto",
+                                    fixedHeight: "auto",
+                                    perPage: 2,
+                                    gap: 20,
+                                },
+                                1024: {
+                                    fixedWidth: "auto",
+                                    fixedHeight: "auto",
+                                    perPage: 3,
+                                    gap: 40,
+                                },
+                            },
                             pagination: true,
                             arrows: false,
-                            perPage: 1,
+                            perPage: 3,
                             perMove: 1,
                             drag: "free",
                             interval: 3000,
@@ -63,19 +83,19 @@ export const ProductCard = ({ item, tagRegion }: { item: IProduct; tagRegion: st
     const t = useTranslations("About");
     return (
         <>
-            <Card className="xl:w-[250px] max-h-[400px] h-full w-full dark:bg-black ">
+            <Card className="xl:w-[330px] max-h-[400px] h-full w-full dark:bg-black ">
                 <Card.Header
-                    className="md:max-h-[200px] p-2 max-h-[200px] h-[150px] md:h-full text-slate-800 dark:text-slate-100"
+                    className="md:max-h-[200px] mx-auto p-2 max-h-[200px] h-[150px] md:h-full text-slate-800 dark:text-slate-100"
                     as="img"
                     src={item?.imageUrl ?? "image"}
                     alt={item?.title?.tag[tagRegion]!}
                 />
-                <Card.Body className="0">
-                    <Typography type="h6" className="text-slate-800 text-sm md:text-base dark:text-slate-100">
+                <Card.Body className="0 px-4">
+                    <Typography type="h6" className="text-slate-600 text-sm md:text-sm dark:text-slate-100">
                         {item?.title?.tag[tagRegion]!}
                     </Typography>
                 </Card.Body>
-                <Card.Footer>
+                <Card.Footer className="px-4">
                     <Button className="dark:border-none border-none bg-primary-blue dark:text-white">{t("buttonMore")}</Button>
                 </Card.Footer>
             </Card>

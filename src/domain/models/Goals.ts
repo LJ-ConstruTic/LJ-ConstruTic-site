@@ -22,10 +22,12 @@ type Description = {
 type Name = {
     tagId: string;
     keyFrontView: string;
-    tag: {
-        pt: string;
-        umb: string;
-        en: string;
-        es: string;
-    };
+    tag:
+        | {
+              pt: string;
+              umb: string;
+              en: string;
+              es: string;
+          }
+        | any;
 };
