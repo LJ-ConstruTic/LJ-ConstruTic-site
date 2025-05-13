@@ -27,7 +27,7 @@ export function ToogleLanguage({ languages }: props) {
             <SelectContent>
                 <SelectGroup>
                     {languages?.map((lang: Language, idx: number) => {
-                        if (languages.length - 1 === idx) return null;
+                        // if (languages.length - 1 === idx) return null;
                         return (
                             <SelectItem key={lang.id} value={lang.tag} disabled={lang.tag === lang_current}>
                                 {lang.tagRegion}

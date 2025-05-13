@@ -12,7 +12,6 @@ type props = {
 export const Goals = ({ goals }: props) => {
     const lang_current = getCookie("NEXT_LOCALE") as string;
     const t = useTranslations("Goals");
-    console.log(goals, "goals");
 
     return (
         <section data-aos="fade-up" className="w-full px-3 xl:px-0 mt-[42px] lg:mt-[96px]">

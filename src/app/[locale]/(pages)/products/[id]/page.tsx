@@ -29,7 +29,6 @@ export default function ProductPage({ params }: { params: { id: string } }) {
     async function getProduct(productId: string) {
         try {
             const response = await productGatewayHttp.getProductById(productId);
-            console.log(response, "response");
 
             if (response?.result === 0) {
                 window.location.replace("/not-found");
