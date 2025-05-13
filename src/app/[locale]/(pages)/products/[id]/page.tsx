@@ -22,8 +22,9 @@ export default function ProductPage({ params }: { params: { id: string } }) {
     const httpClient = new AxiosAdapter();
     const productGatewayHttp = new ProductGatewayHttp(httpClient);
     const t = useTranslations("Products");
+    const translate = useTranslations("HomePage.banner");
+
     const lang_current = getCookie("NEXT_LOCALE") as string;
-    const router = useRouter();
 
     async function getProduct(productId: string) {
         try {
@@ -49,18 +50,36 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
     return (
         <main className="w-full min-h-screen dark:bg-transparent">
+            <section className="w-full min-h-[500px] h-full bg-black flex flex-col flex-1 justify-end">
+                <div className="max-w-[1248px] px-3 lg:px-0 mx-auto w-full gap-5 flex flex-col mb-10">
+                    <h2 className="text-white font-semibold text-4xl max-w-[850px]">
+                        Construções, Soluções Tecnológias, Reparações e Venda de materiais
+                    </h2>
+                    <div>
+                        <Button
+                            onClick={(e: any) => handleClick(e, MENU_ID_LIST.CONTACT)}
+                            className="rounded-full md:px-5 px-3 bg-primary-blue dark:text-white py-5 md:py-8 flex gap-1 items-center"
+                        >
+                            <span>{translate("buttonContact")}</span>
+                            <ArrowRight width={16} />
+                        </Button>
+                    </div>
+                </div>
+            </section>
             <section className="max-w-[1248px] px-3 xl:px-0 h-auto py-5 xl:py-0 xl:h-[573px] mx-auto w-full flex flex-col items-center gap-10 lg:flex-row ">
-                <div className="xl:max-w-[440px] rounded-md h-[403px] w-full ">
-                    <Image
-                        width={440}
-                        height={403}
-                        src={product?.imageUrl!}
-                        alt={product?.title?.tag.pt}
-                        className="w-full h-full object-top"
-                        loading="lazy"
-                        quality={90}
-                        layout="responsive"
-                    />
+                <div className="xl:max-w-[440px] h-[403px] w-full rounded-[75px] bg-black relative">
+                    {product?.imageUrl && (
+                        <Image
+                            width={440}
+                            height={403}
+                            src={product?.imageUrl!}
+                            alt={product?.title?.tag.pt}
+                            className="w-full h-full object-top object-cover"
+                            loading="lazy"
+                            quality={100}
+                            layout="responsive"
+                        />
+                    )}
                 </div>
                 <div className="w-full flex flex-col justify-between gap-10">
                     <div>

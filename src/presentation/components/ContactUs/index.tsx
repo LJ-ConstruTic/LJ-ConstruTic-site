@@ -107,7 +107,7 @@ export const ContactUs = () => {
                                     onChange={formik.handleChange}
                                     value={formik.values.name}
                                     name="name"
-                                    className="outline-none"
+                                    className="outline-none text-black dark:text-slate-100"
                                     style={{ outline: "none" }}
                                     onBlur={formik.handleBlur}
                                 />
@@ -121,7 +121,7 @@ export const ContactUs = () => {
                                     type="text"
                                     onChange={formik.handleChange}
                                     value={formik.values.phone}
-                                    className="outline-none"
+                                    className="outline-none  text-black dark:text-slate-100"
                                     style={{ outline: "none" }}
                                     name="phone"
                                     onBlur={formik.handleBlur}
@@ -138,7 +138,7 @@ export const ContactUs = () => {
                                     value={formik.values.email}
                                     name="email"
                                     onBlur={formik.handleBlur}
-                                    className="outline-none"
+                                    className="outline-none  text-black dark:text-slate-100"
                                     style={{ outline: "none" }}
                                 />
                                 {formik.touched.email && formik.errors.email ? <ErrorMessage message={formik.errors.email} /> : null}
@@ -150,7 +150,7 @@ export const ContactUs = () => {
                                     value={formik.values.message}
                                     name="message"
                                     onBlur={formik.handleBlur}
-                                    className="resize-none focus:outline-none text-slate-900"
+                                    className="resize-none focus:outline-none text-slate-900 dark:text-slate-100"
                                     style={{ outline: "none" }}
                                 ></Textarea>
                                 {formik.touched.message && formik.errors.message ? <ErrorMessage message={formik.errors.message} /> : null}
