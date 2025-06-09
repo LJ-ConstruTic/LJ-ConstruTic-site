@@ -1,40 +1,84 @@
 {
+    "header": {
+        "headWeAre": "Tuwimana Ave",
+        "headProduct": "Ovitangi",
+        "headServices": "Vyakulemba",
+        "headContact": "Ekwato"
+    },
     "HomePage": {
-        "title": "Hello world!",
         "banner": {
-            "buttonContact": "Contacte-nos agora"
+            "homTitle": "Okutunga kwenda okupotolola evi vyatyamelã k’uloñgo",
+            "homPresentation": "Upange wetu walitepa k’olonepa vivali, ndakuti: okutunga, ndetchi olondjo levi vikwavo, kwenda-vo okupotolola evi vyatyamelã k’umesene w’ovikwata viñgi-viñgi. Otchimahõ tchetu okusandjwisa vana vosi vatusandiliya, l’okuvavela upange waswapo kwenda wokaliye.",
+            "buttonContact": "Twasane vakwahi"
         }
     },
     "About": {
-        "buttonMore": "Saiba mais",
-        "title": "Sobre nós",
-        "description": "Reunimos duas áreas importantes e seus derivados no mercado de hoje: Construção Civil e Urbana e Soluções Tecnologia em Tecnologia em Comunicação e Informação TIC/IT (Informática) brindando aos nossos clientes serviços de qualidade com as tecnologias modernas.",
+        "buttonMore": "kulihisã vali",
+        "title": "Satyamelã kupangue wetu",
+        "weHistory": "Ovisinumwilo",
+        "homPresentation": "Upange wetu walitepa k’olonepa vivali, ndakuti: okutunga, ndetchi olondjo levi vikwavo, kwenda-vo okupotolola evi vyatyamelã k’umesene w’ovikwata viñgi-viñgi. Otchimahõ tchetu okusandjwisa vana vosi vatusandiliya, l’okuvavela upange waswapo kwenda wokaliye.",
+        "weHistoryContext": "Luís José: Okutunga l’okupotolola evi vyatyamelã k’umesene LDA ale LJOkutunga l’okupotolola. Etu tukasi tunde k’unhamo w’olohulukãyi vivali l’akwi avali l’anhamo atatu. Otchimahõ tchetu okukwavela upange waswapo ndeti k’okutunga olondjo levi vikwavo, kwenda-vo okupotolola l’okutumbulula evi vyatyamelã k’umesene w’Esapulo kwenda evi vyalityamã latcho.",
+        "description": "Upange wetu walitepa k’olonepa vivali, ndakuti: okutunga, ndetchi olondjo levi vikwavo, kwenda-vo okupotolola evi vyatyamelã k’umesene w’ovikwata viñgi-viñgi. Otchimahõ tchetu okusandjwisa vana vosi vatusandiliya, l’okuvavela upange waswapo kwenda wokaliye.",
         "history": {
-            "title": "Existimos por uma",
-            "subtitle": "Grande razão"
+            "title": "Tuvalipo vali",
+            "subtitle": "okukwavo"
         },
-        "our": "Nossa"
+        "our": "Yetu",
+        "weHistoryContext2": "Tukwete olomesene vyakokelwa, tchikale mulo v’ofeka, tchikale-vo k’olofeka vyo k’osamwa. Handi-vo tukwete ekwatiso ekwatiso ly’olonoñgo vitunda ndetcho k’ofeka y’Osipanha, otcho vitunenele umesene wavelapo.",
+        "weHistoryContext3": "K’upange wetu tukwete-vo eliyandjo ly’olonungi ale olondingupange viñgi-viñgi, vina vitenda ale anhamo akahandangalala ûpange w’okutunga, tchikale mulo v«ofeka, tchikale-vo k’olofeka vyo k’osamwa, ndetchi k’Osipanha, kuna tutenda ekwatiso linene,",
+        "weVision": "Otchimahõ tchetu",
+        "weVisionContext": "Okupotolola evi vyatyamelã k’okutunga alupale kwenda okukonomwisa evi vy’umesene, okwavela ku vosi ovikwata vyaswa-po kwenda vyakolelwa. Handi-vo otchimahõ tchetu undingahuminho letchi tchatyamela k’okukula kw’omanu, enene vali okuvâvela epuluvi ly’okukula kwenda okusanga ekali liwa.",
+        "weMission": "Upange wetu",
+        "team": "Ovilya",
+        "weMissionContext": "Okulinga okuti upange w«okutunga olupale kwenda okutumbulula umesene wevi vyatyamelã kw’asapulo vipitile k’omanu vosi omu mwaleluka kwenda mwaswa-po, kwenda-vo okuvavela evi vy«uloñgo wokaliye.",
+        "weMissionContext2": "Okuswisa-po ondjongole ya vosi, tchikale ondjongole y’okukwata ondjo, tchikale eyi y’okukwata ukulihisõ vumesene, otcho tchalinga otchimahõ tchetu. Evi ndeti kokwetu vyalinga ndesesamelõ ale epuluvi lya vosi."
     },
     "Strategy": {
-        "title": "Estratégia",
+        "title": "Eciyo lyokulitelela",
+        "homEstrategiesTitle": "Olondjila",
+        "homEstrategiesContext": "Otcho tuswise-po ondjongole, twasandiliya l’utate evi vyatyamelã k’ovitanda, okukulihisisã ovisukila vya vosi, vina vyalita l’umesene w’esapulo kwenda-vo w’okutumbulula evi l’ovyo.",
+        "homEstrategiesContext2": "Twakulihã okuti etali evi vyatyamelã k’ovitanda vyalinga vy«okulivelavela-po. Omo lyatcho tchisukila elipongiyo l’okukula k’ûmesene otcho tupotolole ovisukilamwenho. Apa ndeti etu tukwete omanu valilongisa kwenda vatõla-po k’Upange û w’okusanga ondjila vaswa-po.",
         "description": "Realizamos uma pesquisa extensa  no mercado para identificar as necessidades dos clientes no setor de Construção, soluções tecnológicas (Tic), reparações de dispositivos eletrônicos, assim como Venda de materiais referente às áreas que trabalhamos. <br/> <br/> Somos conscientes  que o mercado é competitivo e exige  a necessidade de adaptação rápida no processo evolutivo  tecnológico para atender a demanda dos  clientes, é por esta razão  que nossos especialistas têm trabalhado arduamente para implementar as melhores soluções em cada projeto."
     },
     "Contact": {
-        "buttonSend": "Enviar"
+        "buttonSend": "kutuma",
+        "contWe": "Tusandiliye.",
+        "contMoreInfo": "Wasukila yimwe kayavangwile?",
+        "contWeHelp": "Tusandiliye, oveya. Tukakwavela evi wasukila.",
+        "contWeDoDif": "Û wosi otunga mwiñgi otunga omu mwaswa-po.",
+        "contName": "Etuvi",
+        "contTel": "Esandali",
+        "contEmail": "Ekwato lyesikola",
+        "contMessage": "Eyuli"
     },
     "Footer": {
         "copyright": "Copyright &copy; {year} Todos os Direitos Reservados"
     },
     "Services": {
-        "title": "Nossos Serviços",
-        "contactButton": "Solicitar agora",
-        "buttonMore": "Saiba mais"
+        "title": "Ovikele vyetu",
+        "contactButton": "Lombola hano",
+        "buttonMore": "kulihisã vali"
     },
     "Goals": {
-        "title": "Metas"
+        "title": "Metas",
+        "homGoalsTitle": "Ovimahõ vyetu",
+        "GoalNam0": "Okukulihisã ovisukilamwenho",
+        "GoalDesc0": "Okukulihisã ovisukilamwenho vya vosi otcho tuvavele epotololo lyaswa-po.",
+        "homGoalItemContext2": "Okukapa oseo y’evi vyatyamelã k’olombongo l’uhwasi ukwavo omu mwaswa-po.",
+        "homGoalItemTitle2": "Okusina oloseo vikeya",
+        "homGoalItemTitle3": "Okulikapa ongombo l’otchimuka",
+        "homGoalItemContext3": "Okutunga otchimuka tchaswa-po kwenda tchalyetcha olumwe k’ûpange wosi.",
+        "homGoalItemTitle4": "Okwamama-ko l’apotololo",
+        "homGoalItemContext4": "Okukolisa ale okupamisa olondjila vy’okutalika kwenda okulandisa ovohwasi osi tukwete.",
+        "homGoalItemTitle5": "Ekwamelelõ kalimuhã",
+        "homGoalItemContext5": "Ekwamelelõ lava vosi valinga âkamba vetu v’okwenda k’ûpange wosi, otcho lomwe kakasange ekatanga, kwenda-vo vosi tuvavela epondolo ly’okukula oloneke vyosi.",
+        "homGoalItemTitle6": "Okwetcha evi tukwete",
+        "homGoalItemContext6": "Kwava vosi vatusandiliya, evi tukwete tuvyetcha l’utate, tchavela-po ñgo nda atosi osi aswiswa-po.",
+        "homGoalItemTitle7": "Oloseteko ale okutaliliya âpako",
+        "homGoalItemContext7": "Pange-pange tukwete otchikele tch’okumalã otcho tutaliliye apa patãyi upange wetu, otcho vyosi vyende kovaso, enene vali otcho evi vikeya vipwe evelo."
     },
     "Products": {
-        "title": "Nossos Produtos",
-        "contactButton": "Solicitar agora"
+        "title": "Ovipange vyetu",
+        "contactButton": "Lombola hano"
     }
 }

@@ -1,26 +1,55 @@
 {
+    "header": {
+        "headWeAre": "Who We Are",
+        "headProduct": "Products",
+        "headServices": "Services",
+        "headContact": "Contact"
+    },
     "HomePage": {
-        "title": "Hello world!",
         "banner": {
+            "homTitle": "Construction and ICT/IT Technological Solutions",
+            "homPresentation": "We bring together two important areas and their derivatives in today's market: Civil and Urban Construction and Technology Solutions in Communication and Information Technology ICT/IT (IT), offering our customers quality services with modern technologies.",
             "buttonContact": "Contact us now"
         }
     },
     "About": {
         "buttonMore": "read more",
         "title": "About Us",
+        "weHistory": "History",
+        "homPresentation": "We bring together two important areas and their derivatives in today's market: Civil and Urban Construction and Technology Solutions in Communication and Information Technology ICT/IT (IT), offering our customers quality services with modern technologies.",
+        "weHistoryContext": "Luís José Construção e Soluções Tecnológicas LDA or LJConstruTic we are a company founded in 2023 with the purpose of providing better quality services in the areas of Civil and Urban Construction, Technological Solutions in Communication Technology and ICT/IT Information.",
         "description": "We bring together two important areas and their derivatives in the current market: Civil and Urban Construction and Technology Solutions in Communication and Information Technology ICT/IT (IT), offering our customers quality services with modern technologies.",
         "history": {
             "title": "We exist for a",
             "subtitle": "Big Reason"
         },
+        "weHistoryContext2": "We have a team of local and international professionals and also a close collaboration of Engineers in Spain in order to offer the best services to our customers.",
+        "weHistoryContext3": "We rely on the experience of anonymous Builders with many years of experience in the area of ??construction and civil and urban engineering, IT, IoT, AI, National and International Big Data Engineers and also with the support of powerful partners from Spain.",
+        "weVision": "Vision",
+        "weVisionContext": "Meet the growing demand in the area of ??Civil and Urban Construction and in the Technological area (ICT), shaping intelligent and sustainable final products through continuous innovation, operational excellence and commitment to human and environmental development by promoting local economic development.",
+        "weMission": "Mission",
+        "team": "Team",
+        "weMissionContext": "Make Civil and Urban Construction and ICT/IT Communication and Information Technology accessible to everyone, companies as well as individuals in an easier, safer and more accessible way by improving modernization and technology.",
+        "weMissionContext2": "Fulfill the desire of all dreamers to have a modern and dignified home and/or a computer system that helps us intelligently manage routine activities in our daily lives. We not only see it as a dream but also as a right that everyone should enjoy.",
         "our": "Our"
     },
     "Strategy": {
         "title": "Strategy",
+        "homEstrategiesTitle": "Strategy",
+        "homEstrategiesContext": "We carry out extensive market research to identify customer needs in the Construction sector, technological solutions (ICT), repairs of electronic devices, as well as Sales of materials related to the areas we work.",
+        "homEstrategiesContext2": "We are aware that the market is competitive and requires the need for rapid adaptation in the technological evolutionary process to meet customer demand, which is why our experts have worked hard to implement the best solutions in each project.",
         "description": "We carry out extensive market research to identify customer needs in the Construction sector, technological solutions (ICT), repairs of electronic devices, as well as Sales of materials related to the areas we work. <br/> <br/> We are aware that the market is competitive and requires the need for rapid adaptation in the technological evolutionary process to meet customer demand, which is why our experts have worked hard to implement the best solutions in each project."
     },
     "Contact": {
-        "buttonSend": "Submit"
+        "buttonSend": "Submit",
+        "contWe": "Contact us!",
+        "contMoreInfo": "Need more information?",
+        "contWeHelp": "Contact us and tell us how we can help you.",
+        "contWeDoDif": "Do it differently, do it in easier ways.",
+        "contName": "Name",
+        "contTel": "Telephone",
+        "contEmail": "Email",
+        "contMessage": "Message"
     },
     "Services": {
         "title": "Our Services",
@@ -32,7 +61,22 @@
         "contactButton": "request now"
     },
     "Goals": {
-        "title": "Goals"
+        "title": "Goals",
+        "homGoalsTitle": "Goals",
+        "GoalNam0": "Identify Needs",
+        "GoalDesc0": "Identify specific customer needs to provide customized solutions.",
+        "homGoalItemContext2": "Define and allocate financial resources to the project efficiently.",
+        "homGoalItemTitle2": "Plan Budget",
+        "homGoalItemTitle3": "Establish Team",
+        "homGoalItemContext3": "Assemble a qualified and dedicated team to carry out project tasks.",
+        "homGoalItemTitle4": "Develop Solutions",
+        "homGoalItemContext4": "Develop marketing and sales strategies to promote the company's products and services.",
+        "homGoalItemTitle5": "Continuous Tracking",
+        "homGoalItemContext5": "Continuous contact with the client throughout the execution of the project, avoiding unfortunate actions and ensuring their participation in following developments at each stage.",
+        "homGoalItemTitle6": "Project Delivery",
+        "homGoalItemContext6": "Delivery of the project completed without a hitch as the previous steps were completed with all the rigor and communication between the parties.",
+        "homGoalItemTitle7": "Evaluate Results",
+        "homGoalItemContext7": "Regularly evaluate results and make adjustments as necessary to ensure the success of future projects and thus avoid or mitigate the same mistakes in the future."
     },
     "Footer": {
         "copyright": "Copyright &copy; {year} All Rights Reserved"

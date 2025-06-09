@@ -9,10 +9,11 @@ import { Language } from "@/domain/models/Language";
 import AxiosAdapter from "@/infra/http/axiosAdapter";
 import { LanguageGatewayHttp } from "@/infra/gateway/Language/languageGateway";
 import { ComponentGatewayHttp } from "@/infra/gateway/component/componentGatewayHttp";
-import { HEADER_ID } from "@/lib/data";
+import { HEADER_ID, MENU_ID_LIST } from "@/lib/data";
 import { Component } from "@/domain/models/component";
 import { getCookie } from "cookies-next";
 import { useScroll } from "./useScroll";
+import { useTranslations } from "next-intl";
 
 export const Header = () => {
     const lang_current = getCookie("NEXT_LOCALE") as string;
@@ -22,6 +23,7 @@ export const Header = () => {
     const httpClient = new AxiosAdapter();
     const languageGateway = new LanguageGatewayHttp(httpClient);
     const componentGateway = new ComponentGatewayHttp(httpClient);
+    const t = useTranslations("header");
 
     async function fetchLanguages() {
         try {
@@ -64,7 +66,7 @@ export const Header = () => {
                         </h2>
                         <nav>
                             <ul className="lg:flex items-center hidden gap-4 lg:gap-6">
-                                {componentHeader?.items.map((item, idx: number) => {
+                                {/* {componentHeader?.items.map((item, idx: number) => {
                                     if (idx > 3) return null;
                                     return (
                                         <a href={`/#${item.tagId}`} key={idx} onClick={(e) => handleClick(e, item.tagId)}>
@@ -73,7 +75,27 @@ export const Header = () => {
                                             </li>
                                         </a>
                                     );
-                                })}
+                                })} */}
+                                <a href={`/#${MENU_ID_LIST.WHOARE}`} onClick={(e) => handleClick(e, MENU_ID_LIST.WHOARE)}>
+                                    <li className="cursor-pointer hover:text-primary-blue hover:font-semibold text-slate-600 text-lg dark:text-slate-100 font-semibold">
+                                        {t("headWeAre")}
+                                    </li>
+                                </a>
+                                <a href={`/#${MENU_ID_LIST.SERVICES}`} onClick={(e) => handleClick(e, MENU_ID_LIST.SERVICES)}>
+                                    <li className="cursor-pointer hover:text-primary-blue hover:font-semibold text-slate-600 text-lg dark:text-slate-100 font-semibold">
+                                        {t("headServices")}
+                                    </li>
+                                </a>
+                                <a href={`/#${MENU_ID_LIST.PRODUCTS}`} onClick={(e) => handleClick(e, MENU_ID_LIST.PRODUCTS)}>
+                                    <li className="cursor-pointer hover:text-primary-blue hover:font-semibold text-slate-600 text-lg dark:text-slate-100 font-semibold">
+                                        {t("headProduct")}
+                                    </li>
+                                </a>
+                                <a href={`/#${MENU_ID_LIST.CONTACT}`} onClick={(e) => handleClick(e, MENU_ID_LIST.CONTACT)}>
+                                    <li className="cursor-pointer hover:text-primary-blue hover:font-semibold text-slate-600 text-lg dark:text-slate-100 font-semibold">
+                                        {t("headContact")}
+                                    </li>
+                                </a>
                             </ul>
                         </nav>
                     </div>

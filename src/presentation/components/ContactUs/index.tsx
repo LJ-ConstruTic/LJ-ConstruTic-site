@@ -90,17 +90,13 @@ export const ContactUs = () => {
                     </div>
                     <div className="w-full">
                         <div className="flex flex-col gap-3">
-                            <h2 className="font-bold text-xl lg:text-2xl text-slate-950 dark:text-slate-100">
-                                {contactComponent?.items[0].tag[lang_current]!}
-                            </h2>
-                            <span className="text-sm text-slate-950 dark:text-slate-100">
-                                {contactComponent?.items[1].tag[lang_current]!}
-                            </span>
+                            <h2 className="font-bold text-xl lg:text-2xl text-slate-950 dark:text-slate-100">{t("contMoreInfo")}</h2>
+                            <span className="text-sm text-slate-950 dark:text-slate-100">{t("contWeHelp")}</span>
                         </div>
                         <form onSubmit={formik.handleSubmit} className="mt-5 flex flex-col gap-5">
                             <div className="flex flex-col gap-1">
                                 <label htmlFor="" className="text-sm text-slate-900 dark:text-slate-100 lg:text-base">
-                                    {contactComponent?.items[3].tag[lang_current]!}
+                                    {t("contName")}
                                 </label>
                                 <Input
                                     type="text"
@@ -115,7 +111,7 @@ export const ContactUs = () => {
                             </div>
                             <div className="flex flex-col gap-1">
                                 <label htmlFor="" className="text-sm text-slate-900 dark:text-slate-100 lg:text-base">
-                                    {contactComponent?.items[4].tag[lang_current]!}
+                                    {t("contTel")}
                                 </label>
                                 <Input
                                     type="text"
@@ -130,7 +126,7 @@ export const ContactUs = () => {
                             </div>
                             <div className="flex flex-col gap-1">
                                 <label htmlFor="" className="text-sm text-slate-900 dark:text-slate-100 lg:text-base">
-                                    {contactComponent?.items[5].tag[lang_current]!}
+                                    {t("contEmail")}
                                 </label>
                                 <Input
                                     type="email"

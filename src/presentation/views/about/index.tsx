@@ -13,6 +13,29 @@ import { getCookie } from "cookies-next";
 import { useTranslations } from "next-intl";
 import React, { useEffect, useState } from "react";
 
+const OUR_TEAM = [
+    {
+        id: 1,
+        name: "José Cabral",
+        job: "Software Engineer & Data Engineer",
+        imageUrl: "https://ljconstrutic.com/media/img/teams/jose.png",
+    },
+    {
+        id: 2,
+        name: "Pedro Muteka",
+        job: "Software Developer",
+        imageUrl:
+            "https://media.licdn.com/dms/image/v2/D4D03AQGIKsTFvOAQzg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1687275167622?e=1755129600&v=beta&t=3tApTEs9MCVINFSp4sHsKbYLPosD2xx3lsuhU9bEHAQ",
+    },
+    {
+        id: 3,
+        name: "Fábio Junik",
+        job: "Software Developer",
+        imageUrl:
+            "https://media.licdn.com/dms/image/v2/D4D03AQGF-_aIPZnelQ/profile-displayphoto-shrink_400_400/B4DZXimPFlHwAg-/0/1743263429486?e=1755129600&v=beta&t=ba7w0Rh4k8cZqnLqa7hCNAWZdlO0HoTyMUUT9zLichY",
+    },
+];
+
 const IMG_EYE = "/look.png";
 const IMG_FOGUET = "/foguet.png";
 const IMG_URL =
@@ -84,11 +107,11 @@ export const AboutView = () => {
                         <h3 className="text-[32px] text-green-400">{t("history.title")}</h3>
                         <h4 className="text-[48px] font-bold text-primary-blue">{t("history.subtitle")}</h4>
 
-                        <p className="text-justify">{aboutComponent?.items[1]?.tag[lang_current]!}</p>
+                        <p className="text-justify">{t("weHistoryContext")}</p>
                         <br />
-                        <p className="text-justify">{aboutComponent?.items[2]?.tag[lang_current]!}</p>
+                        <p className="text-justify">{t("weHistoryContext2")}</p>
                         <br />
-                        <p className="text-justify">{aboutComponent?.items[3]?.tag[lang_current]!}</p>
+                        <p className="text-justify">{t("weHistoryContext3")}</p>
                     </div>
                 </section>
 
@@ -100,12 +123,12 @@ export const AboutView = () => {
                         <div className="flex flex-col">
                             <span className="text-[28px] text-primary-blue">{t("our")}</span>
                             <span className="text-[32px] text-primary-blue font-semibold underline underline-offset-4">
-                                {aboutComponent?.items[4]?.tag[lang_current]}
+                                {t("weVision")}
                             </span>
                         </div>
                     </div>
                     <div className="max-w-[1190px] text-[#766F6F] dark:text-slate-300 dark:bg-black mx-auto mt-[32px] bg-[#F5F5F5] p-8">
-                        <p className="text-justify">{aboutComponent?.items[5]?.tag[lang_current]}</p>
+                        <p className="text-justify">{t("weVisionContext")}</p>
                     </div>
                 </section>
 
@@ -114,7 +137,7 @@ export const AboutView = () => {
                         <div className="flex flex-col">
                             <span className="text-[28px] text-primary-blue">{t("our")}</span>
                             <span className="text-[32px] text-primary-blue font-semibold underline underline-offset-4">
-                                {aboutComponent?.items[6]?.tag[lang_current]}
+                                {t("weMission")}
                             </span>
                         </div>
                         <div className="w-[105px] h-[80px] rounded-[10px] shadow-xl flex items-center justify-center">
@@ -122,8 +145,8 @@ export const AboutView = () => {
                         </div>
                     </div>
                     <div className="max-w-[1190px] text-[#766F6F] dark:text-slate-300 dark:bg-black mx-auto mt-[32px] bg-[#F5F5F5] p-8 flex flex-col gap-4 w-full">
-                        <p className="text-justify">{aboutComponent?.items[7]?.tag[lang_current]}</p>
-                        <p>{aboutComponent?.items[8]?.tag[lang_current]}.</p>
+                        <p className="text-justify">{t("weMissionContext")}</p>
+                        <p>{t("weMissionContext2")}.</p>
                     </div>
                 </section>
             </Container>
@@ -132,7 +155,7 @@ export const AboutView = () => {
                     <Container>
                         <div className="flex items-center gap-2 pt-[36px]">
                             <span className="text-[28px] text-green-400">{t("our")}</span>
-                            <span className="text-[32px] text-primary-blue font-semibold">Equipa</span>
+                            <span className="text-[32px] text-primary-blue font-semibold">{t("team")}</span>
                         </div>
                         <section className="mt-[14px] w-full">
                             <Splide
@@ -156,8 +179,8 @@ export const AboutView = () => {
                                 }}
                                 style={{ width: "100%", padding: 0, margin: 0 }}
                             >
-                                {Teams
-                                    ? Teams.items?.map((item: any) => (
+                                {OUR_TEAM.length > 0
+                                    ? OUR_TEAM?.map((item: any) => (
                                           <SplideSlide key={item.id}>
                                               <OficialCard key={item.id} item={item} />
                                           </SplideSlide>
@@ -173,18 +196,18 @@ export const AboutView = () => {
     );
 };
 
-const OficialCard = ({ item }: { item: ITeam }) => {
+const OficialCard = ({ item }: { item: ITeam | any }) => {
     const lang_current = getCookie("NEXT_LOCALE") as string;
     if (!item.id) return null;
     return (
         <>
             <Card className="max-w-xs">
-                <Card.Header as="img" className="max-h-[240px]" src={item.imageUrl} alt={item.name.tag[lang_current]} />
+                <Card.Header as="img" className="max-h-[240px]" src={item.imageUrl} alt={item.name} />
                 <Card.Body className="text-center line-clamp-2">
                     <Typography type="h5" className="text-slate-900 dark:text-slate-200 text-base">
-                        {item.name.tag[lang_current]}
+                        {item.name}
                     </Typography>
-                    <Typography className="my-1 text-foreground text-sm">{item.job.tag[lang_current]}</Typography>
+                    <Typography className="my-1 text-foreground text-sm">{item.job}</Typography>
                 </Card.Body>
             </Card>
         </>

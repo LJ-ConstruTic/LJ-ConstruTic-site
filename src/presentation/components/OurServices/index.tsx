@@ -41,7 +41,7 @@ export const ServiceItem = ({ item }: { item: IService }) => {
                     <img src={item?.imageUrl ?? "image"} alt={item?.imageUrl} className="h-full w-full object-cover" />
                 </CardHeader>
                 <CardBody className="p-6 flex flex-col w-full h-full justify-center gap-2">
-                    <Typography variant="h4" className="mb-2 text-xl font-semibold text-slate-700 dark:text-slate-100">
+                    <Typography variant="h4" className="mb-2 text-xl font-semibold text-slate-700 dark:text-slate-100 line-clamp-1">
                         {item?.name?.tag[lang_current]!}
                     </Typography>
                     <a href={`/services/${item.idx}`} className="inline-block">

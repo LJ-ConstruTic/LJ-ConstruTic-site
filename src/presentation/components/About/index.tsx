@@ -34,11 +34,9 @@ export const AboutUs = ({ aboutComponent }: props) => {
                     </div>
                 </div>
                 <div data-aos="fade-left" className="w-full flex flex-col gap-8">
-                    <h3 className="font-bold text-2xl text-slate-950 dark:text-slate-100">
-                        {aboutComponent?.items[0]?.tag[lang_current]!}
-                    </h3>
+                    <h3 className="font-bold text-center md:text-start text-2xl text-slate-950 dark:text-slate-100">{t("weHistory")}</h3>
                     <p className="xl:max-w-[579.15px] text-sm text-justify text-gray-950 dark:text-gray-100 xl:text-start xl:text-base">
-                        {aboutComponent?.items[1]?.tag[lang_current]!}
+                        {t("weHistoryContext")}
                     </p>
                     <div>
                         <Button className="bg-primary-blue flex items-center gap-1  dark:text-white">

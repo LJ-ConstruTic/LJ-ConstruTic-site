@@ -1,26 +1,55 @@
 {
+    "header": {
+        "headWeAre": "Quienes somos",
+        "headProduct": "Productos",
+        "headServices": "Servicios",
+        "headContact": "Contacto"
+    },
     "HomePage": {
-        "title": "Hello world!",
         "banner": {
+            "homTitle": "Construcción y Soluciones Tecnológicas TIC/IT",
+            "homPresentation": "Reunimos dos áreas importantes y sus derivadas en el mercado actual: Construcción Civil y Urbana y Soluciones Tecnológicas en Comunicaciones y Tecnologías de la Información TIC/TI (TI), ofreciendo a nuestros clientes servicios de calidad con modernas tecnologías.",
             "buttonContact": "contáctanos ahora"
         }
     },
     "About": {
         "buttonMore": "saber más",
         "title": "Sobre nosotros",
+        "homPresentation": "Reunimos dos áreas importantes y sus derivadas en el mercado actual: Construcción Civil y Urbana y Soluciones Tecnológicas en Comunicaciones y Tecnologías de la Información TIC/TI (TI), ofreciendo a nuestros clientes servicios de calidad con modernas tecnologías.",
+        "weHistory": "Historia",
+        "weHistoryContext": "Luís José Construção e Soluções Tecnológicas LDA o LJConstruTic somos una empresa fundada en 2023 con el objetivo de brindar servicios de mejor calidad en las áreas de Construcción Civil y Urbana, Soluciones Tecnológicas en Tecnologías de la Comunicación e Información TIC/TI.",
         "description": "Reunimos dos áreas importantes y sus derivados en el mercado actual: Construcción Civil y Urbana y Soluciones Tecnológicas en Comunicaciones y Tecnologías de la Información TIC/TI (IT), ofreciendo a nuestros clientes servicios de calidad con modernas tecnologías.",
         "history": {
             "title": "Existimos por un",
             "subtitle": "Gran razón"
         },
-        "our": "Nosotros"
+        "our": "Nosotros",
+        "weHistoryContext2": "Contamos con un equipo de profesionales locales e internacionales y también una estrecha colaboración de Ingenieros en España para poder ofrecer los mejores servicios a nuestros clientes.",
+        "weHistoryContext3": "Contamos con la experiencia de Constructores anónimos con muchos años de experiencia en el área de la construcción y la ingeniería civil y urbana, IT, IoT, AI, Ingenieros Big Data nacionales e internacionales y además con el apoyo de potentes socios de España.",
+        "weVision": "Visión",
+        "weVisionContext": "Satisfacer la creciente demanda en el área de la Construcción Civil y Urbana y en el área Tecnológica (TIC), conformando productos finales inteligentes y sustentables a través de la innovación continua, la excelencia operativa y el compromiso con el desarrollo humano y ambiental impulsando el desarrollo económico local.",
+        "weMission": "Misión",
+        "team": "Equipo",
+        "weMissionContext": "Hacer que la Construcción Civil y Urbana y las Tecnologías de la Información y la Comunicación TIC/TI sean accesibles a todos, tanto a empresas como a particulares, de una manera más fácil, segura y accesible, mejorando la modernización y la tecnología.",
+        "weMissionContext2": "Cumplir el deseo de todo soñador de tener un hogar moderno y digno y/o un sistema informático que nos ayude a gestionar inteligentemente las actividades rutinarias de nuestra vida diaria. No sólo lo vemos como un sueño sino también como un derecho que todos deberían disfrutar."
     },
     "Strategy": {
         "title": "Estrategia",
+        "homEstrategiesTitle": "Estrategia",
+        "homEstrategiesContext": "Realizamos amplios estudios de mercado para identificar las necesidades de los clientes en el sector de la Construcción, soluciones tecnológicas (TIC), reparaciones de dispositivos electrónicos, así como Venta de materiales relacionados con las áreas que trabajamos.",
+        "homEstrategiesContext2": "Somos conscientes de que el mercado es competitivo y requiere de una rápida adaptación en el proceso evolutivo tecnológico para satisfacer la demanda de los clientes, por eso nuestros expertos han trabajado duro para implementar las mejores soluciones en cada proyecto.",
         "description": "Realizamos amplios estudios de mercado para identificar las necesidades de los clientes en el sector de la Construcción, soluciones tecnológicas (TIC), reparaciones de dispositivos electrónicos, así como Venta de materiales relacionados con las áreas que trabajamos. <br/> <br/> Somos conscientes de que el mercado es competitivo y requiere de una rápida adaptación en el proceso evolutivo tecnológico para satisfacer la demanda de los clientes, por eso nuestros expertos han trabajado duro para implementar las mejores soluciones en cada proyecto."
     },
     "Contact": {
-        "buttonSend": "Enviar"
+        "buttonSend": "Enviar",
+        "contWe": "¡Contáctanos!",
+        "contMoreInfo": "¿Necesitas más información?",
+        "contWeHelp": "Contáctanos y cuéntanos cómo podemos ayudarte.",
+        "contWeDoDif": "Hazlo de manera diferente, hazlo de maneras más fáciles.",
+        "contName": "Nombre",
+        "contTel": "Teléfono",
+        "contEmail": "Correo Eletrónico",
+        "contMessage": "Mensaje"
     },
     "Services": {
         "title": "Nuestros servicios",
@@ -28,7 +57,22 @@
         "buttonMore": "saber más"
     },
     "Goals": {
-        "title": "Objetivos"
+        "title": "Objetivos",
+        "homGoalsTitle": "Objetivos",
+        "GoalNam0": "Identificar necesidades",
+        "GoalDesc0": "Identificar las necesidades específicas del cliente para brindar soluciones personalizadas.",
+        "homGoalItemContext2": "Definir y asignar recursos financieros al proyecto de manera eficiente.",
+        "homGoalItemTitle2": "Planificar presupuesto",
+        "homGoalItemTitle3": "Establecer equipo",
+        "homGoalItemContext3": "Reunir un equipo calificado y dedicado para llevar a cabo las tareas del proyecto.",
+        "homGoalItemTitle4": "Desarrollar soluciones",
+        "homGoalItemContext4": "Desarrollar estrategias de marketing y ventas para promocionar los productos y servicios de la empresa.",
+        "homGoalItemTitle5": "Seguimiento continuo",
+        "homGoalItemContext5": "Contacto continuo con el cliente durante toda la ejecución del proyecto, evitando acciones desafortunadas y asegurando su participación en el seguimiento de los desarrollos en cada etapa.",
+        "homGoalItemTitle6": "Entrega del proyecto",
+        "homGoalItemContext6": "Entrega del proyecto realizada sin contratiempos ya que los pasos anteriores se realizaron con todo el rigor y comunicación entre las partes.",
+        "homGoalItemTitle7": "Evaluar resultados",
+        "homGoalItemContext7": "Evaluar periódicamente los resultados y realizar los ajustes necesarios para asegurar el éxito de proyectos futuros y así evitar o mitigar los mismos errores en el futuro."
     },
     "Products": {
         "title": "Nuestros productos",

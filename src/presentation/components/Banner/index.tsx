@@ -46,7 +46,7 @@ export const Banner = ({ bannerData }: props) => {
 
     return (
         <section className="w-full flex lg:flex-row flex-col lg:gap-0 h-auto">
-            <div className="w-full relative h-full max-h-[400px] xl:max-h-[580px] ">
+            <div className="w-full relative h-full max-h-[500px] xl:max-h-[590px]">
                 <Splide
                     className="w-full h-full reset-padding-margin"
                     options={{
@@ -69,12 +69,12 @@ export const Banner = ({ bannerData }: props) => {
                         <SplideSlide key={idx}>
                             <main data-aos="fade-down" className="w-full relative h-auto flex flex-col">
                                 <section className="relative w-full h-auto xl:max-w-[1280px] mx-auto">
-                                    <div className="w-full top-32 absolute z-[100] px-3 xl:px-0 flex flex-col justify-center lg:justify-start items-center lg:items-start lg:gap-9 gap-8">
-                                        <h4 className="lg:text-[52px] text-white text-2xl text-center md:text-start font-bold sm:leading-[50px] xl:leading-[65.35px]">
-                                            {bannerData[0]?.tag[lang_current]}
+                                    <div className="w-full top-20 xl:top-28 absolute z-[100] px-3 xl:px-0 flex flex-col justify-center lg:justify-start items-center lg:items-start lg:gap-9 gap-8">
+                                        <h4 className="lg:text-4xl xl:text-5xl md:text-3xl text-white text-2xl text-center md:text-start font-bold sm:leading-[50px] xl:leading-[65.35px]">
+                                            {t("homTitle")}
                                         </h4>
-                                        <p className="text-xs text-center md:text-justify text-white lg:text-left xl:text-xl lg:max-w-[700px]">
-                                            {bannerData[1]?.tag[lang_current]}
+                                        <p className="text-xs md:text-base text-center md:text-justify text-white lg:text-left xl:text-xl lg:max-w-[700px]">
+                                            {t("homPresentation")}
                                         </p>
                                         <div className="flex justify-center md:justify-start">
                                             <Button

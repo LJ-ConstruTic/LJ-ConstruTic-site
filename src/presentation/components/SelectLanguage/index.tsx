@@ -11,10 +11,15 @@ type props = {
     languages: Language | any;
 };
 
+const tagsLanguages = ["en", "es", "pt", "umb"];
+const tagsRegions = ["en-US", "es-ES", "pt-PT", "umb-UB"];
+
 export function ToogleLanguage({ languages }: props) {
     const pathname = usePathname();
     const router = useRouter();
     const lang_current = getCookie("NEXT_LOCALE");
+
+    console.log(languages, "languages");
 
     function toogleLanguage(locale: string) {
         router.replace(pathname, { locale: locale });
@@ -26,11 +31,15 @@ export function ToogleLanguage({ languages }: props) {
             </SelectTrigger>
             <SelectContent>
                 <SelectGroup>
-                    {languages?.map((lang: Language, idx: number) => {
+                    {tagsLanguages?.map((lang: string, idx: number) => {
                         // if (languages.length - 1 === idx) return null;
                         return (
-                            <SelectItem key={lang.id} value={lang.tag} disabled={lang.tag === lang_current}>
-                                {lang.tagRegion}
+                            <SelectItem key={idx} value={lang} disabled={lang === lang_current}>
+                                {tagsRegions[idx] ? (
+                                    <span className="capitalize">{tagsRegions[idx]}</span>
+                                ) : (
+                                    <span className="capitalize">{lang}</span>
+                                )}
                             </SelectItem>
                         );
                     })}
