@@ -40,11 +40,9 @@ const IMG_EYE = "/look.png";
 const IMG_FOGUET = "/foguet.png";
 const IMG_URL =
     "https://s3-alpha-sig.figma.com/img/76b5/81b4/1102dd2a4b2e8801ba6094755a2b4ed9?Expires=1731888000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=I7nJJRVUsP9YNcdrNz2tMY-L9O8P~XfLOwn-bC1ro9YMH34mOMAxxTJ5lBTTbiFmHEV~HDoR-uJozA~vaSPAozUKwQK68IqdWx0vpeiqta4gmBfe777-M-qqbwvhpmiEZjMutsG0TPvenAmmWp7-nyf4m-SKsmcJF6MD06X9ScbUYnxGvhV9cXHRAUY6CXns6qUBPxO56lgdaNzsq47W5B8Cd5tz7HNSagSabbpSY~cZr420MO7aQT3cUWI6ebXQ9HcshfvqbijPnm~UhPHwi7dKA6zpoXGQeHpi~VcnJU76-CgPem13hww~maiM6tx6f9HM3G6~uMYGUbCwQhsJ4A__";
-const IMG1 =
-    "https://ljconstrutic.com/____impro/1/onewebmedia/ia2.jpg?etag=%221b2fc-66393773%22&sourceContentType=image%2Fjpeg&ignoreAspectRatio&resize=547%2B340&quality=85";
+const IMG1 = "/history1.jpg";
 
-const IMG2 =
-    "https://ljconstrutic.com/____impro/1/onewebmedia/unsplash_prXwCmJolGA___serialized1.jpg?etag=%221dc60fa-666186f3%22&sourceContentType=image%2Fpng&ignoreAspectRatio&resize=499%2B340";
+const IMG2 = "/history2.jpg";
 
 export const AboutView = () => {
     const [Teams, setTeams] = useState<{ size: number; items: ITeam[] }>({ size: 0, items: [] });
@@ -78,7 +76,7 @@ export const AboutView = () => {
     return (
         <main className="w-full min-h-screen">
             <div
-                className="w-full h-[378px] bg-primary-blue bg-opacity-95 pt-[105px] text-white"
+                className="w-full h-[378px] bg-primary-blue bg-opacity-65 pt-[105px] text-white"
                 style={{
                     backgroundImage: `url(${IMG1})`,
                     backgroundSize: "cover",
@@ -96,10 +94,10 @@ export const AboutView = () => {
             <Container>
                 <section className="w-full flex mt-[54px] items-center">
                     <div className="relative w-full max-w-[700px] h-[401px] hidden xl:flex">
-                        <div className="w-[473.82px] absolute h-[340px] rounded-[14px] left-40 top-0 bg-black">
+                        <div className="w-[420.82px] absolute h-[340px] rounded-[14px] left-40 top-0 bg-black">
                             <img src={IMG2} alt="" className="w-full h-full object-cover rounded-[14px]" />
                         </div>
-                        <div className="w-[473.82px] absolute h-[340px] rounded-[14px] top-24 left-0 bg-black">
+                        <div className="w-[380px] absolute h-[340px] rounded-[14px] top-32 left-0 bg-black">
                             <img src={IMG1} alt="" className="w-full h-full object-cover rounded-[14px]" />
                         </div>
                     </div>

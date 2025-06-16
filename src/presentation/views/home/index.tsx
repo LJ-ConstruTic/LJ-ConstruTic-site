@@ -19,6 +19,7 @@ import { ComponentGatewayHttp } from "@/infra/gateway/component/componentGateway
 import { ABOUT_ID, HOME_ID, PRODUCT_ID } from "@/lib/data";
 import { Component, Item } from "@/domain/models/component";
 import Loading from "@/presentation/components/loading";
+import { VideoBackground } from "@/presentation/components/videoBackground";
 
 export const HomeView = () => {
     const httpClient = new AxiosAdapter();
@@ -89,12 +90,12 @@ export const HomeView = () => {
 
     useEffect(function getAllDatas() {
         setLoading(true);
-        GetProducts();
-        GetServices();
-        GetGoals();
-        GetHomeDatas();
-        GetProductComponent();
-        GetInfoAbout();
+        // GetProducts();
+        // GetServices();
+        // GetGoals();
+        // GetHomeDatas();
+        // GetProductComponent();
+        // GetInfoAbout();
         setTimeout(() => {
             setLoading(false);
         }, 500);
@@ -104,7 +105,7 @@ export const HomeView = () => {
         return <Loading />;
     }
     return (
-        <main>
+        <main className="relative  w-full h-full min-h-screen overflow-hidden">
             <Banner bannerData={bannerData!} />
             <OurProducts products={products!} productComponent={productComponent!} />
             <AboutUs aboutComponent={aboutComponent!} />

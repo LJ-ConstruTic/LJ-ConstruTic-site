@@ -1,8 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Container } from "../ContainerRoot";
 
-const imgStrategy =
-    "https://ljconstrutic.com/____impro/1/onewebmedia/estrategiaNego.gif?etag=%223308e-66428864%22&sourceContentType=image%2Fgif&ignoreAspectRatio&resize=704%2B352";
+const imgStrategy = "/strategy.jpg";
 
 export const Strategy = () => {
     const t = useTranslations("Strategy");

@@ -1,17 +1,26 @@
 export interface IService {
     idx: number;
-    id: number;
+    id: string;
     imageUrl: string;
     createdAt?: string;
     updatedAt?: string;
     isActive?: boolean;
-    name?: Name;
+    title?: Name;
     description?: Description;
+    children?: Children[];
 }
 
 type Name = {
     tagId: string;
+    idxTag: number;
     keyFrontView: string;
+    tag: Tag;
+};
+
+type Children = {
+    tagId: string;
+    idx: number;
+    keyFrontViewTag: string;
     tag: Tag;
 };
 

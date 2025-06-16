@@ -13,7 +13,8 @@ export interface IProduct {
 }
 
 type Title = {
-    tagId: number;
+    tagId: string;
+    idxTag: number;
     keyFrontView: string;
     tag:
         | {

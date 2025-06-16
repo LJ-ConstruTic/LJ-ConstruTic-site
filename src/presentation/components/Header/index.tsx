@@ -15,6 +15,8 @@ import { getCookie } from "cookies-next";
 import { useScroll } from "./useScroll";
 import { useTranslations } from "next-intl";
 
+const LOGO_IMG = "/logoLJ.png";
+
 export const Header = () => {
     const lang_current = getCookie("NEXT_LOCALE") as string;
     const { handleClick } = useScroll();
@@ -59,11 +61,9 @@ export const Header = () => {
             <header className="fixed top-0 flex justify-between z-30 bg-white shadow-sm dark:bg-black items-center h-20 w-full px-3 xl:px-0">
                 <div className="max-w-[1248px] mx-auto flex w-full justify-between gap-20">
                     <div className="flex items-center gap-10 w-full justify-between">
-                        <h2 className="font-bold text-xl md:text-2xl cursor-pointer">
-                            <Link href="/">
-                                <span className="text-primary-blue">LJ</span>ConstruTic
-                            </Link>
-                        </h2>
+                        <Link href="/">
+                            <img src={LOGO_IMG} alt="logo lj construtic" width={140} height={100} />
+                        </Link>
                         <nav>
                             <ul className="lg:flex items-center hidden gap-4 lg:gap-6">
                                 {/* {componentHeader?.items.map((item, idx: number) => {
@@ -77,22 +77,22 @@ export const Header = () => {
                                     );
                                 })} */}
                                 <a href={`/#${MENU_ID_LIST.WHOARE}`} onClick={(e) => handleClick(e, MENU_ID_LIST.WHOARE)}>
-                                    <li className="cursor-pointer hover:text-primary-blue hover:font-semibold text-slate-600 text-lg dark:text-slate-100 font-semibold">
+                                    <li className="cursor-pointer hover:text-primary-blue hover:font-semibold text-slate-600 text-base dark:text-slate-100 font-semibold">
                                         {t("headWeAre")}
                                     </li>
                                 </a>
                                 <a href={`/#${MENU_ID_LIST.SERVICES}`} onClick={(e) => handleClick(e, MENU_ID_LIST.SERVICES)}>
-                                    <li className="cursor-pointer hover:text-primary-blue hover:font-semibold text-slate-600 text-lg dark:text-slate-100 font-semibold">
+                                    <li className="cursor-pointer hover:text-primary-blue hover:font-semibold text-slate-600 text-base dark:text-slate-100 font-semibold">
                                         {t("headServices")}
                                     </li>
                                 </a>
                                 <a href={`/#${MENU_ID_LIST.PRODUCTS}`} onClick={(e) => handleClick(e, MENU_ID_LIST.PRODUCTS)}>
-                                    <li className="cursor-pointer hover:text-primary-blue hover:font-semibold text-slate-600 text-lg dark:text-slate-100 font-semibold">
+                                    <li className="cursor-pointer hover:text-primary-blue hover:font-semibold text-slate-600 text-base dark:text-slate-100 font-semibold">
                                         {t("headProduct")}
                                     </li>
                                 </a>
                                 <a href={`/#${MENU_ID_LIST.CONTACT}`} onClick={(e) => handleClick(e, MENU_ID_LIST.CONTACT)}>
-                                    <li className="cursor-pointer hover:text-primary-blue hover:font-semibold text-slate-600 text-lg dark:text-slate-100 font-semibold">
+                                    <li className="cursor-pointer hover:text-primary-blue hover:font-semibold text-slate-600 text-base dark:text-slate-100 font-semibold">
                                         {t("headContact")}
                                     </li>
                                 </a>

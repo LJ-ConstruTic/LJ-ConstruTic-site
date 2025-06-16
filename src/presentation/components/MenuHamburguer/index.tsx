@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useScroll } from "../Header/useScroll";
+import { MENU_ID_LIST } from "@/lib/data";
 
 type Props = {
     children: React.ReactNode;
@@ -8,6 +10,7 @@ type Props = {
 
 const HamburgerMenu = ({ children }: Props) => {
     const [isOpen, setIsOpen] = useState(false);
+    const { handleClick } = useScroll();
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -25,17 +28,29 @@ const HamburgerMenu = ({ children }: Props) => {
                 }`}
             >
                 <ul className="flex flex-col space-y-2 p-4">
-                    <li className="hover:text-primary-blue hover:font-semibold">
-                        <a href="/#aboutus">Quem somos</a>
+                    <li
+                        className="hover:text-primary-blue text-sm hover:font-semibold"
+                        onClick={(e: any) => handleClick(e, MENU_ID_LIST.WHOARE)}
+                    >
+                        <a href={`/#${MENU_ID_LIST.WHOARE}`}>Quem somos</a>
                     </li>
-                    <li className="hover:text-primary-blue hover:font-semibold">
-                        <a href="/#products">Produtos</a>
+                    <li
+                        className="hover:text-primary-blue text-sm hover:font-semibold"
+                        onClick={(e: any) => handleClick(e, MENU_ID_LIST.PRODUCTS)}
+                    >
+                        <a href={`/#${MENU_ID_LIST.PRODUCTS}`}>Produtos</a>
                     </li>
-                    <li className="hover:text-primary-blue hover:font-semibold">
-                        <a href="/#services">Serviços</a>
+                    <li
+                        className="hover:text-primary-blue text-sm hover:font-semibold"
+                        onClick={(e: any) => handleClick(e, MENU_ID_LIST.SERVICES)}
+                    >
+                        <a href={`/#${MENU_ID_LIST.SERVICES}`}>Serviços</a>
                     </li>
-                    <li className="hover:text-primary-blue hover:font-semibold">
-                        <a href="/#contact">Contato</a>
+                    <li
+                        className="hover:text-primary-blue text-sm hover:font-semibold"
+                        onClick={(e: any) => handleClick(e, MENU_ID_LIST.CONTACT)}
+                    >
+                        <a href={`/#${MENU_ID_LIST.CONTACT}`}>Contato</a>
                     </li>
                     <li>{children}</li>
                 </ul>

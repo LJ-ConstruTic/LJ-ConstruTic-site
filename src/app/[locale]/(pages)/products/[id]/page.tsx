@@ -6,6 +6,7 @@ import { CONTACT_ID, MENU_ID_LIST } from "@/lib/data";
 import { ContactUs } from "@/presentation/components/ContactUs";
 import { useScroll } from "@/presentation/components/Header/useScroll";
 import Loading from "@/presentation/components/loading";
+import { PRODUCTS } from "@/presentation/components/OurProducts";
 import { Button } from "@/presentation/components/ui/button";
 import { getCookie } from "cookies-next";
 import { ArrowRight } from "lucide-react";
@@ -34,7 +35,8 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 window.location.replace("/not-found");
                 return;
             }
-            setProduct(response);
+            const product = PRODUCTS.find((p) => p.idx === Number(productId));
+            setProduct(product);
             setIsLoading(false);
         } catch (error) {
             window.location.replace("/not-found");
@@ -66,7 +68,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 </div>
             </section> */}
             <section className="max-w-[1248px] px-3 xl:px-0 h-auto py-5 xl:py-0 xl:h-[573px] mx-auto w-full flex flex-col items-center gap-10 lg:flex-row ">
-                <div className="xl:max-w-[440px] h-[403px] w-full rounded-[75px] bg-black relative">
+                <div className="xl:max-w-[440px] h-[403px] w-full border relative">
                     {product?.imageUrl && (
                         <Image
                             width={440}

@@ -8,6 +8,9 @@ import { useEffect, useState } from "react";
 import { HEADER_ID, MENU_ID_LIST } from "@/lib/data";
 import { usePathname, useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { Link } from "lucide-react";
+
+const LOGO_IMG = "/logoLJ.png";
 
 export const Footer = () => {
     const lang_current = getCookie("NEXT_LOCALE") as string;
@@ -68,11 +71,10 @@ export const Footer = () => {
     return (
         <footer className="w-full py-10 bg-black dark:border-t-2">
             <Container>
-                <div className="w-full flex flex-col py-6 gap-6">
-                    <h1 className="font-bold text-lg md:text-2xl text-left">
-                        <span className="text-primary-blue">LJ</span>
-                        <span className="text-white">ConstruTic</span>
-                    </h1>
+                <div className="w-full flex flex-col py-6 gap-2">
+                    <div className="">
+                        <img src={LOGO_IMG} alt="logo lj construtic" width={140} height={100} />
+                    </div>
                     <div className="flex flex-col md:flex-col justify-between gap-10">
                         <ul className="flex flex-col gap-2  text-sm">
                             {/* {componentHeader?.items.map((item, idx: number) => {
@@ -84,22 +86,22 @@ export const Footer = () => {
                                 );
                             })} */}
                             <a href={`/#${MENU_ID_LIST.WHOARE}`} onClick={(e) => handleClick(e, MENU_ID_LIST.WHOARE)}>
-                                <li className="cursor-pointer text-sm hover:text-primary-blue hover:font-semibold text-slate-600 md:text-lg dark:text-slate-100 font-semibold">
+                                <li className="cursor-pointer text-sm hover:text-primary-blue hover:font-semibold text-slate-200 md:text-base dark:text-slate-100 font-semibold">
                                     {header("headWeAre")}
                                 </li>
                             </a>
                             <a href={`/#${MENU_ID_LIST.SERVICES}`} onClick={(e) => handleClick(e, MENU_ID_LIST.SERVICES)}>
-                                <li className="cursor-pointer text-sm hover:text-primary-blue hover:font-semibold text-slate-600 md:text-lg dark:text-slate-100 font-semibold">
+                                <li className="cursor-pointer text-sm hover:text-primary-blue hover:font-semibold text-slate-200 md:text-base dark:text-slate-100 font-semibold">
                                     {header("headServices")}
                                 </li>
                             </a>
                             <a href={`/#${MENU_ID_LIST.PRODUCTS}`} onClick={(e) => handleClick(e, MENU_ID_LIST.PRODUCTS)}>
-                                <li className="cursor-pointer text-sm hover:text-primary-blue hover:font-semibold text-slate-600 md:text-lg dark:text-slate-100 font-semibold">
+                                <li className="cursor-pointer text-sm hover:text-primary-blue hover:font-semibold text-slate-200 md:text-base dark:text-slate-100 font-semibold">
                                     {header("headProduct")}
                                 </li>
                             </a>
                             <a href={`/#${MENU_ID_LIST.CONTACT}`} onClick={(e) => handleClick(e, MENU_ID_LIST.CONTACT)}>
-                                <li className="cursor-pointer text-sm hover:text-primary-blue hover:font-semibold text-slate-600 md:text-lg dark:text-slate-100 font-semibold">
+                                <li className="cursor-pointer text-sm hover:text-primary-blue hover:font-semibold text-slate-200 md:text-base dark:text-slate-100 font-semibold">
                                     {header("headContact")}
                                 </li>
                             </a>

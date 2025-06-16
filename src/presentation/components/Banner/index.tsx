@@ -9,13 +9,11 @@ import { getCookie } from "cookies-next";
 import { useTranslations } from "next-intl";
 import { useScroll } from "../Header/useScroll";
 import { MENU_ID_LIST } from "@/lib/data";
+import Image from "next/image";
 
-const IMG_1 =
-    "https://ljconstrutic.com/____impro/1/onewebmedia/software2222.jpeg?etag=%22212ee6-6661b500%22&sourceContentType=image%2Fjpeg&withoutEnlargement&resize=2500&quality=85";
-const IMG_2 =
-    "https://ljconstrutic.com/____impro/1/onewebmedia/softwareMatenance22webp.webp?etag=%22e0da-6661a706%22&sourceContentType=image%2Fwebp";
-const IMG_3 =
-    "https://ljconstrutic.com/____impro/1/onewebmedia/unsplash__TPTXZd9mOo%281%29.jpg?etag=%2219aa52-6660e172%22&sourceContentType=image%2Fjpeg&withoutEnlargement&resize=2500&quality=85";
+const IMG_1 = "/banner1.jpg";
+const IMG_2 = "/banner2.jpg";
+const IMG_3 = "/banner3.jpg";
 
 const bannerArray = [
     {
@@ -79,7 +77,7 @@ export const Banner = ({ bannerData }: props) => {
                                         <div className="flex justify-center md:justify-start">
                                             <Button
                                                 onClick={(e: any) => handleClick(e, MENU_ID_LIST.CONTACT)}
-                                                className="rounded-full md:px-5 px-3 bg-primary-blue dark:text-white py-5 md:py-8 flex gap-1 items-center"
+                                                className="rounded-lg md:px-5 px-3 bg-primary-blue dark:text-white py-3 md:py-6 flex gap-1 items-center"
                                             >
                                                 <span>{t("buttonContact")}</span>
                                                 <ArrowRight width={16} />
@@ -88,8 +86,15 @@ export const Banner = ({ bannerData }: props) => {
                                     </div>
                                 </section>
                                 <div className="w-full h-full bg-black relative">
-                                    <img src={item.imgUrl} alt="" className="w-full h-[400px] xl:h-[580px] object-cover" />
-                                    <div className="absolute inset-0 bg-black opacity-85"></div>
+                                    <Image
+                                        loading="lazy"
+                                        width={1000}
+                                        height={1000}
+                                        src={item.imgUrl}
+                                        alt=""
+                                        className="w-full h-[400px] xl:h-[580px] object-cover"
+                                    />
+                                    <div className="absolute inset-0 bg-black opacity-70"></div>
                                 </div>
                             </main>
                         </SplideSlide>

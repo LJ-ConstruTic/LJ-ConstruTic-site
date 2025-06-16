@@ -5,6 +5,7 @@ import ServiceGatewayHttp from "@/infra/gateway/service/serviceGatewayHttp";
 import AxiosAdapter from "@/infra/http/axiosAdapter";
 import { ContactUs } from "@/presentation/components/ContactUs";
 import Loading from "@/presentation/components/loading";
+import { SERVICE_TYPE } from "@/presentation/components/OurServices";
 import { Button } from "@/presentation/components/ui/button";
 import { getCookie } from "cookies-next";
 import { ArrowRight } from "lucide-react";
@@ -27,7 +28,8 @@ export default function ServicePage({ params }: { params: { id: string } }) {
                 window.location.replace("/not-found");
                 return;
             }
-            setService(response);
+            const service = SERVICE_TYPE.find((s) => s.idx === Number(id));
+            setService(service);
             setIsLoandig(false);
         } catch (error) {
             window.location.replace("/not-found");
@@ -44,16 +46,20 @@ export default function ServicePage({ params }: { params: { id: string } }) {
     return (
         <main className="w-full min-h-screen dark:bg-transparent">
             <section className="max-w-[1248px] px-3 xl:px-0 h-auto py-5 xl:py-0 xl:h-[573px] mx-auto w-full flex flex-col items-center gap-10 lg:flex-row ">
-                <div className="lg:max-w-[400px] rounded-[14px] h-[400px] w-full bg-black">
-                    <img src={service?.imageUrl} alt={service?.name?.tag.pt} className="w-full h-full object-cover rounded-lg" />
+                <div className="lg:max-w-[500px] rounded-[14px] h-[400px] w-full bg-black">
+                    <img src={service?.imageUrl} alt={service?.title?.tag.pt} className="w-full rounded-md h-full object-cover border" />
                 </div>
                 <div className="w-full flex flex-col gap-10">
                     <div>
                         <h3 className="text-green-500">{t("title")}</h3>
-                        <h2 className="font-bold text-2xl">Serviço {service?.name?.tag[lang_current]}</h2>
+                        <h2 className="font-bold text-2xl">Serviço {service?.title?.tag[lang_current]}</h2>
                     </div>
-                    <div className="flex flex-col gap-6 text-sm text-justify lg:text-start max-w-[600px]">
-                        <p>{service?.description?.tag[lang_current]}</p>
+                    <div>
+                        {service?.children?.map((child) => (
+                            <div className="flex flex-col gap-6 text-sm text-justify lg:text-start max-w-[700px]">
+                                <p className="text-justify text-sm md:text-base">{child?.tag[lang_current!]}</p>
+                            </div>
+                        ))}
                     </div>
                     <div>
                         <Button className="bg-primary-blue text-white flex gap-1">
