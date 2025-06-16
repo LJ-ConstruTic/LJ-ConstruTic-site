@@ -108,7 +108,7 @@ export const GoalItem = ({
                     <span className="text-white text-xl  font-bold">{index.toString()}</span>
                 </div>
             </div>
-            <div className="w-full h-auto">
+            <div className="w-full h-auto p-2">
                 <h3 className="font-bold text-xl ">{item.name}</h3>
                 <p className="text-xs mt-3 line-clamp-8  text-justify lg:text-start">{item.description}</p>
             </div>
