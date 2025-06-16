@@ -228,7 +228,7 @@ export const OurProducts: React.FC<props> = ({ products, productComponent }) => 
                             speed: 800,
                             autoplay: true,
                         }}
-                        style={{ padding: 0, margin: 0 }}
+                        style={{ height: "auto", padding: 0, margin: 0 }}
                     >
                         {PRODUCTS?.map((item, idx) => (
                             <SplideSlide key={idx}>
@@ -248,7 +248,7 @@ export const ProductCard = ({ item, tagRegion }: { item: IProduct; tagRegion: st
     const t = useTranslations("About");
     return (
         <>
-            <Card className="xl:max-w-[330px] max-w-[15rem] max-h-[300px] lg:max-h-[450px] h-auto w-full dark:bg-black ">
+            <Card className="xl:max-w-[330px] max-w-[15rem] max-h-[400px] lg:max-h-[450px] h-auto w-full dark:bg-black ">
                 <Card.Header
                     className="md:max-h-[200px] mx-auto border-b max-h-[200px] h-[150px] md:h-full text-slate-800 dark:text-slate-100"
                     as="img"
