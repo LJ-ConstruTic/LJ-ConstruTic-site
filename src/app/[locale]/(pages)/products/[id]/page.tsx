@@ -27,22 +27,23 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
     const lang_current = getCookie("NEXT_LOCALE") as string;
 
-    async function getProduct(productId: string) {
-        try {
-            const response = await productGatewayHttp.getProductById(productId);
-
-            if (response?.result === 0) {
-                window.location.replace("/not-found");
-                return;
-            }
-            const product = PRODUCTS.find((p) => p.idx === Number(productId));
-            if (!product) {
-                window.location.replace("/not-found");
-                return;
-            }
-            setProduct(product);
-            setIsLoading(false);
-        } catch (error) {}
+    function getProduct(productId: string) {
+        // try {
+        // const response = await productGatewayHttp.getProductById(productId);
+        // if (response?.result === 0) {
+        //     window.location.replace("/not-found");
+        //     return;
+        // }
+        const product = PRODUCTS.find((p) => p.idx === Number(productId));
+        if (!product) {
+            window.location.replace("/not-found");
+            return;
+        }
+        setProduct(product);
+        setIsLoading(false);
+        // } catch (error) {
+        // setIsLoading(false);
+        // }
     }
 
     useEffect(() => {

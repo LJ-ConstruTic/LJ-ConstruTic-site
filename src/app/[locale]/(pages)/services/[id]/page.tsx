@@ -21,23 +21,23 @@ export default function ServicePage({ params }: { params: { id: string } }) {
     const serviceGatewayHttp = new ServiceGatewayHttp(httpClient);
     const lang_current = getCookie("NEXT_LOCALE") as string;
 
-    async function getServiceById(id: string) {
-        try {
-            const response = await serviceGatewayHttp.getServiceById(Number(id));
-            if (response?.result === 0) {
-                window.location.replace("/not-found");
-                return;
-            }
-            const service = SERVICE_TYPE.find((s) => s.idx === Number(id));
-            if (!service) {
-                window.location.replace("/not-found");
-                return;
-            }
-            setService(service);
-            setIsLoandig(false);
-        } catch (error) {
-            setIsLoandig(false);
+    function getServiceById(id: string) {
+        // try {
+        // const response = await serviceGatewayHttp.getServiceById(Number(id));
+        // if (response?.result === 0) {
+        // window.location.replace("/not-found");
+        // return;
+        // }
+        const service = SERVICE_TYPE.find((s) => s.idx === Number(id));
+        if (!service) {
+            window.location.replace("/not-found");
+            return;
         }
+        setService(service);
+        setIsLoandig(false);
+        // } catch (error) {
+        // setIsLoandig(false);
+        // }
     }
 
     useEffect(() => {
