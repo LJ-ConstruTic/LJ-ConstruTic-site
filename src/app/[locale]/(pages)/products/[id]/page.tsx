@@ -36,11 +36,13 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 return;
             }
             const product = PRODUCTS.find((p) => p.idx === Number(productId));
+            if (!product) {
+                window.location.replace("/not-found");
+                return;
+            }
             setProduct(product);
             setIsLoading(false);
-        } catch (error) {
-            window.location.replace("/not-found");
-        }
+        } catch (error) {}
     }
 
     useEffect(() => {

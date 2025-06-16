@@ -9,7 +9,7 @@ export const AosContainer = () => {
             easing: "ease-out-cubic",
             once: true,
             offset: 40,
-            duration: 1000,
+            duration: 1200,
         });
     }, []);
     return <></>;

@@ -182,12 +182,13 @@ export const PRODUCTS: IProduct[] = [
 
 export const OurProducts: React.FC<props> = ({ products, productComponent }) => {
     const lang_current = getCookie("NEXT_LOCALE") as string;
+    const t = useTranslations("Products");
 
     return (
         <Container>
             <section id={MENU_ID_LIST.PRODUCTS} className="w-full mt-10 xl:mt-[50px]">
                 <h2 data-aos="fade-up" className="font-bold text-[24px] md:text-[32px] text-slate-700 dark:text-slate-100 text-center">
-                    {productComponent?.items[0].tag[lang_current]!}
+                    {t("title")}
                 </h2>
                 <div data-aos="fade-up" className="mt-4 w-full cursor-move reset-padding-margin">
                     <Splide

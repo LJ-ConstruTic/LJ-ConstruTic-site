@@ -19,8 +19,6 @@ export function ToogleLanguage({ languages }: props) {
     const router = useRouter();
     const lang_current = getCookie("NEXT_LOCALE");
 
-    console.log(languages, "languages");
-
     function toogleLanguage(locale: string) {
         router.replace(pathname, { locale: locale });
     }

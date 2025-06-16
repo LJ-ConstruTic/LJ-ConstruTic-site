@@ -29,10 +29,13 @@ export default function ServicePage({ params }: { params: { id: string } }) {
                 return;
             }
             const service = SERVICE_TYPE.find((s) => s.idx === Number(id));
+            if (!service) {
+                window.location.replace("/not-found");
+                return;
+            }
             setService(service);
             setIsLoandig(false);
         } catch (error) {
-            window.location.replace("/not-found");
             setIsLoandig(false);
         }
     }
