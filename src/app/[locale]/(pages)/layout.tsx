@@ -20,8 +20,9 @@ import Loading from "@/presentation/components/loading";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "Lj Construtic",
-    description: "",
+    title: "LjConstruTic",
+    description:
+        "Luís José Construção e Soluções Tecnológicas LDA ou LJConstruTic somos uma Empresa fundada em 2023 com propósito de prestar serviços de melhor qualidade nas áreas de Construção Civil e Urbana, Soluções Tecnológicas em Tecnologia de Comunicação e Informação TIC/IT.",
 };
 
 export default function RootLayout({
