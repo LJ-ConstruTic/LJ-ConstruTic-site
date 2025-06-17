@@ -174,7 +174,7 @@ export const AboutView = () => {
                                     autoPlay: true,
                                     loop: true,
                                 }}
-                                style={{ width: "100%", height: "auto", padding: 0, margin: 0 }}
+                                style={{ width: "100%", height: "auto" }}
                             >
                                 {OUR_TEAM.length > 0
                                     ? OUR_TEAM?.map((item: any) => (
