@@ -190,7 +190,7 @@ export const OurProducts: React.FC<props> = ({ products, productComponent }) => 
                 <h2 data-aos="fade-up" className="font-bold text-[24px] md:text-[32px] text-slate-700 dark:text-slate-100 text-center">
                     {t("title")}
                 </h2>
-                <div data-aos="fade-up" className="mt-4 w-full cursor-move reset-padding-margin">
+                <div data-aos="fade-up" className="mt-[30px] w-full cursor-move reset-padding-margin">
                     <Splide
                         options={{
                             type: "loop",
