@@ -198,26 +198,6 @@ export const OurProducts: React.FC<props> = ({ products, productComponent }) => 
                             fixedHeight: "auto",
                             width: "100%",
                             gap: 40,
-                            breakpoints: {
-                                640: {
-                                    fixedWidth: "auto",
-                                    fixedHeight: "auto",
-                                    perPage: 1,
-                                    gap: 10,
-                                },
-                                768: {
-                                    fixedWidth: "auto",
-                                    fixedHeight: "auto",
-                                    perPage: 2,
-                                    gap: 20,
-                                },
-                                1024: {
-                                    fixedWidth: "auto",
-                                    fixedHeight: "auto",
-                                    perPage: 3,
-                                    gap: 40,
-                                },
-                            },
                             pagination: true,
                             arrows: false,
                             perPage: 3,
