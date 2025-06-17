@@ -3,7 +3,9 @@
 import { IService } from "@/domain/models/Service";
 import ServiceGatewayHttp from "@/infra/gateway/service/serviceGatewayHttp";
 import AxiosAdapter from "@/infra/http/axiosAdapter";
+import { MENU_ID_LIST } from "@/lib/data";
 import { ContactUs } from "@/presentation/components/ContactUs";
+import { useScroll } from "@/presentation/components/Header/useScroll";
 import Loading from "@/presentation/components/loading";
 import { SERVICE_TYPE } from "@/presentation/components/OurServices";
 import { Button } from "@/presentation/components/ui/button";
@@ -20,6 +22,7 @@ export default function ServicePage({ params }: { params: { id: string } }) {
     const httpClient = new AxiosAdapter();
     const serviceGatewayHttp = new ServiceGatewayHttp(httpClient);
     const lang_current = getCookie("NEXT_LOCALE") as string;
+    const { handleClick } = useScroll();
 
     function getServiceById(id: string) {
         // try {
@@ -59,13 +62,16 @@ export default function ServicePage({ params }: { params: { id: string } }) {
                     </div>
                     <div>
                         {service?.children?.map((child) => (
-                            <div className="flex flex-col gap-6 text-sm text-justify lg:text-start max-w-[700px]">
+                            <div key={child.idx} className="flex flex-col gap-6 text-sm text-justify lg:text-start max-w-[700px]">
                                 <p className="text-justify text-sm md:text-base">{child?.tag[lang_current!]}</p>
                             </div>
                         ))}
                     </div>
                     <div>
-                        <Button className="bg-primary-blue text-white flex gap-1">
+                        <Button
+                            onClick={(e: any) => handleClick(e, MENU_ID_LIST.CONTACT)}
+                            className="bg-primary-blue text-white flex gap-1"
+                        >
                             <span>{t("contactButton")}</span>
                             <ArrowRight />
                         </Button>
