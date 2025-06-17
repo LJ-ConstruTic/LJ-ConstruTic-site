@@ -19,7 +19,6 @@ import { ComponentGatewayHttp } from "@/infra/gateway/component/componentGateway
 import { ABOUT_ID, HOME_ID, PRODUCT_ID } from "@/lib/data";
 import { Component, Item } from "@/domain/models/component";
 import Loading from "@/presentation/components/loading";
-import { VideoBackground } from "@/presentation/components/videoBackground";
 
 export const HomeView = () => {
     const httpClient = new AxiosAdapter();

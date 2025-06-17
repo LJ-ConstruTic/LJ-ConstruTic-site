@@ -208,7 +208,7 @@ export const OurProducts: React.FC<props> = ({ products, productComponent }) => 
                             speed: 800,
                             autoplay: true,
                         }}
-                        style={{ padding: 0, margin: 0, height: "auto" }}
+                        style={{ height: "auto" }}
                     >
                         {PRODUCTS?.map((item, idx) => (
                             <SplideSlide key={idx}>
