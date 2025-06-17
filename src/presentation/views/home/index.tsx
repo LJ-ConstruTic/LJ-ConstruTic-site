@@ -105,7 +105,7 @@ export const HomeView = () => {
         return <Loading />;
     }
     return (
-        <main className="relative  w-full h-full min-h-screen overflow-hidden">
+        <main className="relative w-full h-full min-h-screen overflow-hidden">
             <Banner bannerData={bannerData!} />
             <OurProducts products={products!} productComponent={productComponent!} />
             <AboutUs aboutComponent={aboutComponent!} />

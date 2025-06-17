@@ -152,14 +152,14 @@ export const AboutView = () => {
                     <Container>
                         <div className="flex items-center gap-2 pt-[36px]">
                             <span className="lg:text-[28px] text-xl text-green-400">{t("our")}</span>
-                            <span className="lg:text-[32px] text-base text-primary-blue font-semibold">{t("team")}</span>
+                            <span className="lg:text-[32px] text-xl text-primary-blue font-semibold">{t("team")}</span>
                         </div>
                         <section className="lg:mt-[14px] w-full">
                             <Splide
                                 ref={slideRef}
                                 options={{
-                                    fixedWidth: 300,
-                                    fixedHeight: 350,
+                                    fixedWidth: "auto",
+                                    fixedHeight: "auto",
                                     type: "loop",
                                     pagination: false,
                                     arrows: false,
@@ -198,13 +198,13 @@ const OficialCard = ({ item }: { item: ITeam | any }) => {
     if (!item.id) return null;
     return (
         <>
-            <Card className="lg:max-w-xs max-w-[12rem]">
-                <Card.Header as="img" className="max-h-[240px]" src={item.imageUrl} alt={item.name} />
+            <Card className="lg:max-w-xs max-w-[15rem] max-h-[400px] h-auto">
+                <Card.Header as="img" className="max-h-[200px]" src={item.imageUrl} alt={item.name} />
                 <Card.Body className="text-center line-clamp-2">
                     <Typography type="h5" className="text-slate-900 dark:text-slate-200 text-base">
-                        {item.name}
+                        <span className="text-base">{item.name}</span>
                     </Typography>
-                    <Typography className="my-1 text-foreground text-sm">{item.job}</Typography>
+                    <Typography className="my-1 text-foreground text-xs md:text-sm">{item.job}</Typography>
                 </Card.Body>
             </Card>
         </>

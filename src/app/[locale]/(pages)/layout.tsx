@@ -35,7 +35,7 @@ export default function RootLayout({
     const messages = useMessages();
     return (
         <html lang="en">
-            <body className={cn(inter.className, "bg-white dark:bg-black text-slate-900 dark:text-slate-100")}>
+            <body className={cn(inter.className, "bg-white dark:bg-[#0C0A09] text-slate-900 dark:text-slate-100")}>
                 <LoaderTop />
                 <AosContainer />
                 <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} storageKey="@ljconstrutic-site">
