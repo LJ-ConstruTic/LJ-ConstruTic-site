@@ -38,7 +38,7 @@ export default function RootLayout({
             <body className={cn(inter.className, "bg-white dark:bg-[#0C0A09] text-slate-900 dark:text-slate-100")}>
                 <LoaderTop />
                 <AosContainer />
-                <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} storageKey="@ljconstrutic-site">
+                <ThemeProvider attribute="class" defaultTheme="light" enableSystem={true} storageKey="@ljconstrutic-site">
                     <NextIntlClientProvider locale={locale} messages={messages}>
                         <Suspense fallback={""}>
                             <Header />
