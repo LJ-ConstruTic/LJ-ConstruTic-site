@@ -102,7 +102,7 @@ export const GoalItem = ({
     tagRegion: string;
 }) => {
     return (
-        <div className="lg:max-w-[414px] dark:border w-full max-h-[200px] min-h-[180px] h-auto bg-[#f2f2f2] dark:bg-slate-900 rounded-[8px] flex gap-1 pt-4">
+        <div className="lg:max-w-[414px] relative dark:border w-full max-h-[200px] h-full bg-[#f2f2f2] dark:bg-slate-900 rounded-[8px] flex gap-1 pt-4">
             <div className="relative -left-4 -top-6">
                 <div className="w-[60px] h-[60px] rounded-full flex items-center justify-center bg-green-500">
                     <span className="text-white text-xl  font-bold">{index.toString()}</span>
@@ -110,7 +110,7 @@ export const GoalItem = ({
             </div>
             <div className="w-full h-auto p-2">
                 <h3 className="font-bold text-xl ">{item.name}</h3>
-                <p className="text-xs mt-3 line-clamp-8  text-justify lg:text-start">{item.description}</p>
+                <p className="text-xs mt-3 line-clamp-5  text-justify lg:text-start">{item.description}</p>
             </div>
         </div>
     );
