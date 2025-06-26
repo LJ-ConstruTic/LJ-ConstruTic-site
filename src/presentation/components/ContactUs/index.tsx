@@ -30,9 +30,7 @@ export const ContactUs = () => {
         try {
             const response = (await componentGatewayHttp.getComponentByTag(CONTACT_ID)) as Component;
             setContactComponent(response);
-        } catch (err) {
-            console.error(err);
-        }
+        } catch (err) {}
     }
     const formik = useFormik({
         initialValues: {

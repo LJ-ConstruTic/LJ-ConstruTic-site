@@ -36,9 +36,7 @@ export const Header = () => {
             if (languagesMap) {
                 setLanguages(languagesMap);
             }
-        } catch (err) {
-            console.error(err);
-        }
+        } catch (err) {}
     }
 
     async function getComponentHeader() {
