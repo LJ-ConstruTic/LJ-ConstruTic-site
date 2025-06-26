@@ -62,7 +62,10 @@ export default function ServicePage({ params }: { params: { id: string } }) {
                     </div>
                     <div>
                         {service?.children?.map((child) => (
-                            <div key={child.idx} className="flex flex-col gap-6 text-sm text-justify lg:text-start max-w-[700px]">
+                            <div
+                                key={child.idx}
+                                className="flex flex-col gap-6 text-sm md:text-base text-justify lg:text-start  max-w-[700px]"
+                            >
                                 <p className="text-justify text-sm md:text-base">{child?.tag[lang_current!]}</p>
                             </div>
                         ))}

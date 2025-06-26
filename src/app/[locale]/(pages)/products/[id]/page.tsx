@@ -95,7 +95,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                             return (
                                 <p
                                     key={idx}
-                                    className="dark:text-slate-100 text-black text-justify"
+                                    className="dark:text-slate-100 text-black text-justify text-sm lg:text-base"
                                     dangerouslySetInnerHTML={{ __html: item.tag[lang_current]! }}
                                 ></p>
                             );

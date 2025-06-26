@@ -117,7 +117,7 @@ export const AboutView = () => {
                         <div className="w-[105px] h-[80px] rounded-[10px] shadow-xl flex items-center justify-center">
                             <img src={IMG_EYE} alt="" />
                         </div>
-                        <div className="flex flex-col">
+                        <div className="flex flex-col gap-2">
                             <span className="lg:text-[28px] text-base text-primary-blue">{t("our")}</span>
                             <span className="lg:text-[32px] text-base text-primary-blue font-semibold underline underline-offset-4">
                                 {t("weVision")}
@@ -131,7 +131,7 @@ export const AboutView = () => {
 
                 <section className="lg:mt-[125px] mt-[50px] w-full">
                     <div className="flex items-center gap-4 flex-1 justify-end">
-                        <div className="flex flex-col">
+                        <div className="flex flex-col gap-2">
                             <span className="lg:text-[28px] text-base text-primary-blue">{t("our")}</span>
                             <span className="lg:text-[32px] text-base text-primary-blue font-semibold underline underline-offset-4">
                                 {t("weMission")}
