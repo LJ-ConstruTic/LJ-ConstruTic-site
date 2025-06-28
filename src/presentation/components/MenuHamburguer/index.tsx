@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useScroll } from "../Header/useScroll";
 import { MENU_ID_LIST } from "@/lib/data";
+import { useTranslations } from "next-intl";
 
 type Props = {
     children: React.ReactNode;
@@ -11,6 +12,7 @@ type Props = {
 const HamburgerMenu = ({ children }: Props) => {
     const [isOpen, setIsOpen] = useState(false);
     const { handleClick } = useScroll();
+    const t = useTranslations("header");
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -32,25 +34,25 @@ const HamburgerMenu = ({ children }: Props) => {
                         className="hover:text-primary-blue text-sm hover:font-semibold"
                         onClick={(e: any) => handleClick(e, MENU_ID_LIST.WHOARE)}
                     >
-                        <a href={`/#${MENU_ID_LIST.WHOARE}`}>Quem somos</a>
+                        <a href={`/#${MENU_ID_LIST.WHOARE}`}>{t("headWeAre")}</a>
                     </li>
                     <li
                         className="hover:text-primary-blue text-sm hover:font-semibold"
                         onClick={(e: any) => handleClick(e, MENU_ID_LIST.PRODUCTS)}
                     >
-                        <a href={`/#${MENU_ID_LIST.PRODUCTS}`}>Produtos</a>
+                        <a href={`/#${MENU_ID_LIST.PRODUCTS}`}>{t("headProduct")}</a>
                     </li>
                     <li
                         className="hover:text-primary-blue text-sm hover:font-semibold"
                         onClick={(e: any) => handleClick(e, MENU_ID_LIST.SERVICES)}
                     >
-                        <a href={`/#${MENU_ID_LIST.SERVICES}`}>Serviços</a>
+                        <a href={`/#${MENU_ID_LIST.SERVICES}`}>{t("headServices")}</a>
                     </li>
                     <li
                         className="hover:text-primary-blue text-sm hover:font-semibold"
                         onClick={(e: any) => handleClick(e, MENU_ID_LIST.CONTACT)}
                     >
-                        <a href={`/#${MENU_ID_LIST.CONTACT}`}>Contato</a>
+                        <a href={`/#${MENU_ID_LIST.CONTACT}`}>{t("headContact")}</a>
                     </li>
                     <li>{children}</li>
                 </ul>

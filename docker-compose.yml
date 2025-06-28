@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+    app:
+        build: . # ✅ Construir localmente usando o Dockerfile
+        container_name: ljconstrutic-site
+        restart: always
+        ports:
+            - "3000:3000"
+        environment:
+            - NODE_ENV=production
+            # Adicione outras variáveis aqui
