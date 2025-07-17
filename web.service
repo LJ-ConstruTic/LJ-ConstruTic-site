@@ -1,0 +1,18 @@
+[Unit]
+Description=WebPublic on container Docker v1 ljconstrutic.com
+After=network.target docker.service
+Requires=docker.service
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/docker run --rm --name webvercel-container -p 4200:4200 ljconstrutic-site #<--- RENPLAZAR CON EL NOMBRE REAL
+ExecStop=/usr/bin/docker stop webvercel-container
+
+# Opcional: proteger el servicio
+User=root
+Group=0
+
+[Install]
+WantedBy=multi-user.target
+
+
